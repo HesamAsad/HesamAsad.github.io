@@ -31,10 +31,12 @@
             document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
         </script>
         <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/academicons.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <meta http-equiv="cleartype" content="on">
         <meta name="msapplication-TileColor" content="#000000">
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="assets/css/academicons.css"/>
         <script type="text/x-mathjax-config">
              MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); 
         </script>
@@ -42,8 +44,6 @@
              MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } }); 
         </script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <style>
             .dashed-line {
                 border-top: 1px dashed gray;
@@ -63,14 +63,14 @@
                             <li class="masthead__menu-item masthead__menu-item--lg">
                                 <a href="http://HesamAsad.github.io">Hesam Asadollahzadeh</a>
                             </li>
-                            <li class="masthead__menu-item">
+                            <!-- <li class="masthead__menu-item">
                                 <a href="http://HesamAsad.github.io/cv/">CV</a>
+                            </li> -->
+                            <li class="masthead__menu-item">
+                                <a href="http://HesamAsad.github.io/teachings">Teachings</a>
                             </li>
                             <li class="masthead__menu-item">
-                                <a href="http://HesamAsad.github.io/teachings/">Teachings</a>
-                            </li>
-                            <li class="masthead__menu-item">
-                                <a href="http://HesamAsad.github.io/projects/">Projects</a>
+                                <a href="http://HesamAsad.github.io/projects">Projects</a>
                             </li>
                         </ul>
                         <ul class="hidden-links hidden"></ul>
@@ -168,92 +168,80 @@
             <div class="archive">
                 <h1 class="page__title">Teaching</h1>
                 <h2 id="current-teachings-summer-semester-2023--unili">Current Teachings</h2>
-                <ul>
-                    <li>
-                        Introduction to Machine Learning
-                    </li>
-                </ul>
-                <h3 id="past-teachings--unili">Past Teachings @ UniLi</h3>
-                <ul>
-                    <li>
-                        <span class="badge badge-primary">
-                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            MSc
-                        </span>
-                        Data and Application Security &#8211;Exercise [<a href="https://my.uni.li/tabid/251/id/63771.67/default.aspx" target="_blank">SS22</a>
-                        ] 
-                        <a href="https://www.giovanniapruzzese.com/files/feedback/das22.png" target="_blank" rel="noopener">
-                            <span class="badge badge-info">
-                                <small>
-                                    <i class="fa fa-comment" aria-hidden="true"></i>
-                                </small>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <span class="badge badge-danger">
-                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            BSc
-                        </span>
-                        Information Systems Development [<a href="https://my.uni.li/tabid/251/id/63054.67/default.aspx" target="_blank">WS21</a>
-                        , <a href="https://my.uni.li/tabid/251/id/65615.67/default.aspx" target="_blank">WS22</a>
-                        ] 
-                        <a href="https://www.giovanniapruzzese.com/files/feedback/isd21.png" target="_blank" rel="noopener">
-                            <span class="badge badge-info">
-                                <small>
-                                    <i class="fa fa-comment" aria-hidden="true"></i>
-                                </small>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <span class="badge badge-danger">
-                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            BSc
-                        </span>
-                        Information Management &#8211;Exercise [<a href="https://my.uni.li/tabid/251/id/61542.67/default.aspx" target="_blank">SS21</a>
-                        ] 
-                        <a href="https://www.giovanniapruzzese.com/files/feedback/im21.png" target="_blank" rel="noopener">
-                            <span class="badge badge-info">
-                                <small>
-                                    <i class="fa fa-comment" aria-hidden="true"></i>
-                                </small>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <span class="badge badge-danger">
-                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            BSc
-                        </span>
-                        Systems Analysis and Design &#8211;Exercise [<a href="https://my.uni.li/tabid/251/id/59692.67/default.aspx" target="_blank">WS20</a>
-                        , <a href="https://my.uni.li/tabid/251/id/65358.67/default.aspx" target="_blank">WS22</a>
-                        ] 
-                        <a href="https://www.giovanniapruzzese.com/files/feedback/sad20.png" target="_blank" rel="noopener">
-                            <span class="badge badge-info">
-                                <small>
-                                    <i class="fa fa-comment" aria-hidden="true"></i>
-                                </small>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-                <h3 id="other-teachings">Other Teachings</h3>
+                <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+                    <h3 class="archive__item-title" itemprop="headline">
+                        <a href="https://ut-acm.ir/events/soc2023/ai/" rel="permalink">Introduction to Machine Learning and Artificial Intelligence</a>
+                    </h3>
+                    <p> Summer School, <i>ACM Student Branch, University of Tehran</i>, Summer 2023 </p>
+                    <img class="align-left img-thumbnail" style="width:200px" src="images/ML.jpg">
+                    <p class="archive__item-excerpt excerpt" itemprop="description">
+                        This course covers the basics of machine learning and prerequisites. It explores regression, decision trees, and neural networks. Through practical exercises, students gain hands-on experience with data. The course concludes with an introduction to deep learning, image processing models, and a review of newer models.
+                    </p>
+                </article>
+                <br/>
+                <h3 id="past-teachings--unili">Teaching Assistantship</h3>
                 <ul>
                     <li>
                         <span class="badge badge-primary">
                             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                             MSc
                         </span>
-                        UniMoRe: Teaching Assistant for Computer Security [2017-2020]
+                        Deep Learning, <i>Sharif University of Technology</i>, Dr. Mahdieh Soleymani Baghshah, <i>S23</i>
                     </li>
-                    <li>CRIT Research: Short course on Cybersecurity and Machine Learning [2020]</li>
-                </ul>
-                <h3 id="resources-for-students">Resources for Students</h3>
-                <ul>
                     <li>
-                        <a href="https://www.giovanniapruzzese.com/expose">How to write an Expose</a>
+                        <span class="badge badge-primary">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            MSc
+                        </span>
+                        Neural Networks, <i>University of Tehran</i>, Dr. Ahmad Kalhor, <i>S23</i>
                     </li>
+                    <li>
+                        <span class="badge badge-danger">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            BSc
+                        </span>
+                        Artificial Intelligence, <i>University of Tehran</i>, Dr. Yadollah Yaghoobzadeh, Dr. Hakimeh Fadaei, <i>S23, F22, S22</i>
+                    </li>
+                    <li>
+                        <span class="badge badge-danger">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            BSc
+                        </span>
+                        Engineering Probability & Statistics, <i>University of Tehran</i>, Dr. Behnam Bahrak, <i>F22</i>
+                    </li>
+                    <li>
+                        <span class="badge badge-danger">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            BSc
+                        </span>
+                        Design & Analysis of Algorithms, <i>University of Tehran</i>, Dr. Mohammad Javad Dousti, <i>S22, F22</i>
+                    </li>
+                    <li>
+                        <span class="badge badge-danger">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            BSc
+                        </span>
+                        Data Structures & Algorithms, <i>University of Tehran</i>, Dr. Hesham Faili, <i>F22</i>
+                    </li>
+                </ul>
+                <h2 id="current-teachings-summer-semester-2023--unili">Previous Teachings</h2>
+                <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+                    <h3 class="archive__item-title" itemprop="headline">
+                        <a href="https://drive.google.com/drive/folders/1LX55RWgHgE9tJxrsqUfvq25rWK-2OMpQ" rel="permalink">Deep Learning and Machine Intelligence</a> (<a href="https://drive.google.com/file/d/1QB8KsQJoX885vknsbDz_7F7JSyRelU3p/view?usp=sharing" rel="permalink">Certificate</a>)
+                    </h3>
+                    <p> Summer School, <i>ACM Student Branch, University of Tehran</i>, 2022 </p>
+                    <img class="align-left img-thumbnail" style="width:100px" src="images/ML2.png">
+                    <p class="archive__item-excerpt excerpt" itemprop="description">
+                        This course covers the basics of machine learning and prerequisites. It explores regression, decision trees, and neural networks.
+                    </p>
+                </article>
+                <br/>
+                <h3 class="archive__item-title" itemprop="headline">
+                    Slides:
+                </h3>
+                <ul>
+                <li>Introduction</li>
+                <iframe src="https://drive.google.com/file/d/1s5cB8Tg6fGEZr5zhsPiaTn8mE7BYCur9/preview" height="320" width="550" allow="autoplay"></iframe>
                 </ul>
             </div>
         </div>
@@ -294,5 +282,6 @@
                 </div>
             </footer>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
