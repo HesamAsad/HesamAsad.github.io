@@ -30,12 +30,22 @@ body {
 
 ::-moz-selection {
     color: #fff;
-    background: #000
+    background: #1934ff
 }
 
 ::selection {
     color: #fff;
-    background: #000
+    background: #1934ff
+}
+
+a:active {
+    color: #fff;
+    background: #199bff;
+}
+
+a:focus {
+    color: #fff;
+    background: #199bff;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section {
@@ -52,7 +62,7 @@ audio:not([controls]) {
 }
 
 a {
-    color: #52adc8
+    color: #2ca1c5
 }
 
 a:hover,a:active {
