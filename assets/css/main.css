@@ -102,22 +102,22 @@ body {
 
 ::-moz-selection {
     color: #fff;
-    background: #1934ff
+    background: #57068c
 }
 
 ::selection {
     color: #fff;
-    background: #1934ff
+    background: #57068c
 }
 
 a:active {
     color: #fff;
-    background: #199bff;
+    background: #57068c;
 }
 
 a:focus {
     color: #fff;
-    background: #199bff;
+    background: #57068c;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section {
