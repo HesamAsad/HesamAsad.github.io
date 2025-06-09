@@ -32,7 +32,8 @@
         </script>
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/academicons.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet' type='text/css'>
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <meta http-equiv="cleartype" content="on">
         <meta name="msapplication-TileColor" content="#000000">
@@ -45,9 +46,344 @@
         </script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
         <style>
+            :root {
+                --primary-color: #4f46e5;
+                --secondary-color: #3730a3;
+                --accent-color: #6366f1;
+                --text-color: #374151;
+                --text-light: #9ca3af;
+                --bg-light: #fafafa;
+                --border-color: #f3f4f6;
+                --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+                --shadow-lg: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6;
+                color: var(--text-color);
+                font-weight: 400;
+                letter-spacing: -0.01em;
+            }
+
+            /* Animations */
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .animate-fade-in-up {
+                animation: fadeInUp 0.8s ease-out forwards;
+            }
+
+            .animate-fade-in-left {
+                animation: fadeInLeft 0.8s ease-out forwards;
+            }
+
+            /* Minimalist Author Section */
+            .author__avatar img {
+                border-radius: 50%;
+                border: 2px solid var(--border-color);
+                transition: all 0.2s ease;
+            }
+
+            .author__avatar:hover img {
+                border-color: var(--primary-color);
+            }
+
+            .author__name {
+                color: var(--text-color);
+                font-weight: 600;
+                font-size: 1.4rem;
+                letter-spacing: -0.02em;
+            }
+
+            .author__bio {
+                color: var(--text-light);
+                font-weight: 400;
+                font-size: 1rem;
+            }
+
+            /* Minimalist Social Links */
+            .author__urls a {
+                transition: all 0.2s ease;
+                border-radius: 4px;
+                padding: 0.4rem;
+                margin: 0.1rem 0;
+                display: flex;
+                align-items: center;
+            }
+
+            .author__urls a:hover {
+                background: var(--bg-light);
+                color: var(--primary-color);
+            }
+
+            .author__urls p {
+                margin: 0.5rem 0;
+                padding: 0.4rem;
+                line-height: 1.3;
+                font-size: 0.9rem;
+            }
+
+            .author__content {
+                margin-bottom: 0.5rem;
+            }
+
+            .author__urls-wrapper {
+                margin-top: 0.5rem;
+            }
+
+            /* Minimalist Navigation */
+            .masthead {
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--border-color);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .masthead__menu-item a {
+                transition: all 0.2s ease;
+                border-radius: 4px;
+                padding: 0.5rem 1rem;
+            }
+
+            .masthead__menu-item a:hover {
+                background: var(--bg-light);
+                color: var(--primary-color);
+            }
+
+            /* Minimalist Page Title and Headings */
+            .page__title, h2 {
+                color: var(--text-color);
+                font-weight: 500;
+                margin-bottom: 1rem;
+                position: relative;
+                padding-bottom: 0.3rem;
+            }
+
+            .page__title {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .page__title::after, h2::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                background: var(--primary-color);
+            }
+
+            .page__title::after {
+                width: 50px;
+            }
+
+            h2::after {
+                width: 30px;
+            }
+
+            h3 {
+                color: var(--text-color);
+                font-weight: 500;
+                margin-bottom: 0.75rem;
+            }
+
+            /* Minimalist Teaching Cards */
+            .archive__item {
+                background: white;
+                border-radius: 4px;
+                padding: 1.25rem;
+                margin-bottom: 1rem;
+                box-shadow: var(--shadow);
+                transition: all 0.2s ease;
+                border: 1px solid var(--border-color);
+            }
+
+            .archive__item:hover {
+                transform: translateY(-1px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .archive__item-title {
+                color: var(--text-color);
+                font-weight: 600;
+                font-size: 1.2rem;
+                margin-bottom: 0.75rem;
+                line-height: 1.4;
+                letter-spacing: -0.02em;
+            }
+
+            .archive__item-title a {
+                color: var(--text-color);
+                text-decoration: none;
+                transition: all 0.2s ease;
+            }
+
+            .archive__item-title a:hover {
+                color: var(--primary-color);
+            }
+
+            .archive__item-excerpt {
+                color: var(--text-light);
+                line-height: 1.6;
+                margin-bottom: 0.75rem;
+                font-size: 0.95rem;
+            }
+
+            .img-thumbnail {
+                border-radius: 4px;
+                box-shadow: var(--shadow);
+                transition: all 0.2s ease;
+                margin-right: 1rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .img-thumbnail:hover {
+                transform: scale(1.02);
+                box-shadow: var(--shadow-lg);
+            }
+
+            /* Minimalist Badges */
+            .badge {
+                display: inline-block;
+                padding: 0.3rem 0.6rem;
+                font-size: 0.75rem;
+                font-weight: 500;
+                border-radius: 4px;
+                margin-right: 0.4rem;
+                margin-bottom: 0.4rem;
+                transition: all 0.2s ease;
+                border: 1px solid;
+            }
+
+            .badge-primary {
+                background: var(--bg-light);
+                color: var(--primary-color);
+                border-color: var(--primary-color);
+            }
+
+            .badge-danger {
+                background: #fef2f2;
+                color: #dc2626;
+                border-color: #dc2626;
+            }
+
+            .badge:hover {
+                background: var(--primary-color);
+                color: white;
+                box-shadow: var(--shadow);
+            }
+
+            /* Enhanced Lists */
+            ul li {
+                margin-bottom: 0.8rem;
+                padding: 0.5rem;
+                border-radius: 6px;
+                transition: all 0.3s ease;
+            }
+
+            ul li:hover {
+                background: var(--bg-light);
+                transform: translateX(5px);
+            }
+
+            /* Enhanced iframe */
+            iframe {
+                border-radius: 8px;
+                box-shadow: var(--shadow);
+                transition: all 0.3s ease;
+                margin: 1rem 0;
+            }
+
+            iframe:hover {
+                box-shadow: var(--shadow-lg);
+            }
+
+            /* Loading animation for elements */
+            .fade-in {
+                opacity: 0;
+                animation: fadeInUp 0.8s ease-out forwards;
+            }
+
+            .fade-in:nth-child(1) { animation-delay: 0.1s; }
+            .fade-in:nth-child(2) { animation-delay: 0.2s; }
+            .fade-in:nth-child(3) { animation-delay: 0.3s; }
+            .fade-in:nth-child(4) { animation-delay: 0.4s; }
+            .fade-in:nth-child(5) { animation-delay: 0.5s; }
+
+            /* Enhanced footer */
+            .page__footer {
+                background: var(--bg-light);
+                border-top: 1px solid var(--border-color);
+                margin-top: 4rem;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .img-thumbnail {
+                    width: 100% !important;
+                    max-width: 300px;
+                    margin: 0 auto 1rem auto;
+                    display: block;
+                }
+                
+                iframe {
+                    width: 100% !important;
+                    height: 250px !important;
+                }
+            }
+
+            /* Code and Tech Elements */
+            code, .code, .tech-term {
+                font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+                font-size: 0.9em;
+                background: var(--bg-light);
+                padding: 0.2em 0.4em;
+                border-radius: 3px;
+                border: 1px solid var(--border-color);
+                font-weight: 400;
+            }
+
+            /* Enhanced Typography */
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                letter-spacing: -0.02em;
+            }
+
+            /* Smooth scrolling */
+            html {
+                scroll-behavior: smooth;
+            }
+
             .dashed-line {
-                border-top: 1px dashed gray;
-                padding-top: 20px;
+                border-top: none;
+                padding-top: 0;
             }
         </style>
         <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -84,23 +420,24 @@
         </div>
         <div id="main" role="main">
             <div class="sidebar sticky">
-                <div itemscope itemtype="http://schema.org/Person">
+                <div itemscope itemtype="http://schema.org/Person" class="animate-fade-in-left">
                     <div class="author__avatar">
                         <img src="images/profile.jpg" class="author__avatar" alt="Hesam Asadollahzadeh">
                     </div>
                     <div class="author__content">
                         <h3 class="author__name">Hesam Asadollahzadeh</h3>
-                        <p class="author__bio">B.Sc. Student</p>
+                        <p class="author__bio">Ph.D. Student</p>
                     </div>
                     <div class="author__urls-wrapper">
                         <button class="btn btn--inverse">Follow</button>
                         <ul class="author__urls social-icons">
                             <p>
                                 <i class="fa fa-fw fa-university" aria-hidden="true"></i>
-                                Electrical and Computer Engineering Department <br>University of Tehran
+                                The University of Melbourne<br>
+                                ADM+S Centre of Excellence
                             </p>
                             <li>
-                                <a href="mailto:ha11@sanger.ac.uk">
+                                <a href="mailto:asadollahzah@unimelb.edu.au">
                                     <i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
                                     Email
                                 </a>
@@ -162,7 +499,7 @@
                             <li>
                                 <a href="https://twitter.com/HesamAsdz">
                                     <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i>
-                                    Twitter
+                                    X (Twitter)
                                 </a>
                             </li>
                         </ul>
@@ -170,21 +507,21 @@
                 </div>
             </div>
             <div class="archive">
-                <h1 class="page__title">Teaching</h1>
-                <h2 id="current-teachings-summer-semester-2023--unili">Current Teaching</h2>
-                <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+                <h1 class="page__title animate-fade-in-up">Teaching</h1>
+                <!-- <h2 id="current-teachings-summer-semester-2023--unili" class="fade-in">Current Teaching</h2>
+                <article class="archive__item fade-in" itemscope="" itemtype="http://schema.org/CreativeWork">
                     <h3 class="archive__item-title" itemprop="headline">
                         <a href="https://ut-acm.ir/events/soc2023/ai/" rel="permalink">Introduction to Machine Learning and Artificial Intelligence</a>
                     </h3>
                     <p> Summer School, <i>ACM Student Branch, University of Tehran</i>, Summer 2023 </p>
-                    <img class="align-left img-thumbnail" style="width:200px" src="images/ML.jpg">
+                    <img class="align-left img-thumbnail" style="width:200px" src="images/ML.jpg" alt="Machine Learning Course">
                     <p class="archive__item-excerpt excerpt" itemprop="description">
                         This course covers the basics of machine learning and prerequisites. It explores regression, decision trees, and neural networks. Through practical exercises, students gain hands-on experience with data. The course concludes with an introduction to deep learning, image processing models, and a review of newer models.
                     </p>
                 </article>
-                <br/>
-                <h3 id="past-teachings--unili">Teaching Assistantship</h3>
-                <ul>
+                <br/> -->
+                <h3 id="past-teachings--unili" class="fade-in">Teaching Assistantship</h3>
+                <ul class="fade-in">
                     <li>
                         <span class="badge badge-primary">
                             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
@@ -246,25 +583,37 @@
                         Data Structures & Algorithms, <i>University of Tehran</i>, Dr. Hesham Faili, <i>F22</i>
                     </li>
                 </ul>
-                <h2 id="current-teachings-summer-semester-2023--unili">Previous Teachings</h2>
-                <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+                <h2 id="current-teachings-summer-semester-2023--unili" class="fade-in">Previous Teachings</h2>
+                <article class="archive__item fade-in" itemscope="" itemtype="http://schema.org/CreativeWork">
+                    <h3 class="archive__item-title" itemprop="headline">
+                        <a href="https://ut-acm.ir/events/soc2023/ai/" rel="permalink">Introduction to Machine Learning and Artificial Intelligence</a>
+                    </h3>
+                    <p> Summer School, <i>ACM Student Branch, University of Tehran</i>, Summer 2023 </p>
+                    <img class="align-left img-thumbnail" style="width:200px" src="images/ML.jpg" alt="Machine Learning Course">
+                    <p class="archive__item-excerpt excerpt" itemprop="description">
+                        This course covers the basics of machine learning and prerequisites. It explores regression, decision trees, and neural networks. Through practical exercises, students gain hands-on experience with data. The course concludes with an introduction to deep learning, image processing models, and a review of newer models.
+                    </p>
+                </article>
+                <article class="archive__item fade-in" itemscope="" itemtype="http://schema.org/CreativeWork">
                     <h3 class="archive__item-title" itemprop="headline">
                         <a href="https://drive.google.com/drive/folders/1LX55RWgHgE9tJxrsqUfvq25rWK-2OMpQ" rel="permalink">Deep Learning and Machine Intelligence</a> (<a href="https://drive.google.com/file/d/1QB8KsQJoX885vknsbDz_7F7JSyRelU3p/view?usp=sharing" rel="permalink">Certificate</a>)
                     </h3>
                     <p> Summer School, <i>ACM Student Branch, University of Tehran</i>, 2022 </p>
-                    <img class="align-left img-thumbnail" style="width:100px" src="images/ML2.png">
+                    <img class="align-left img-thumbnail" style="width:100px" src="images/ML2.png" alt="Deep Learning Course">
                     <p class="archive__item-excerpt excerpt" itemprop="description">
                         This course covers the basics of machine learning and prerequisites. It explores regression, decision trees, and neural networks.
                     </p>
                 </article>
                 <br/>
-                <h3 class="archive__item-title" itemprop="headline">
-                    Slides:
-                </h3>
-                <ul>
-                <li>Introduction</li>
-                <iframe src="https://drive.google.com/file/d/1s5cB8Tg6fGEZr5zhsPiaTn8mE7BYCur9/preview" height="320" width="550" allow="autoplay"></iframe>
-                </ul>
+                <div class="fade-in">
+                    <h3 class="archive__item-title" itemprop="headline">
+                        Slides:
+                    </h3>
+                    <ul>
+                        <li>Introduction</li>
+                        <iframe src="https://drive.google.com/file/d/1s5cB8Tg6fGEZr5zhsPiaTn8mE7BYCur9/preview" height="320" width="550" allow="autoplay"></iframe>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="page__footer">
@@ -298,12 +647,44 @@
                     </ul>
                 </div>
                 <div class="page__footer-copyright">
-                    &copy;2023 Hesam Asadollahzadeh. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>
+                    &copy;2024 Hesam Asadollahzadeh. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>
                     &amp;<a href="https://github.com/academicpages/academicpages.github.io"> AcademicPages</a>, 
                     a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
                 </div>
             </footer>
         </div>
+        <script>
+            // Add smooth animations on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+
+            // Add typing effect to the main title
+            document.addEventListener('DOMContentLoaded', function() {
+                const title = document.querySelector('.page__title');
+                if (title) {
+                    title.style.opacity = '1';
+                }
+            });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
