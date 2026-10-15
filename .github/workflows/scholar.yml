@@ -1,0 +1,33 @@
+name: Refresh Google Scholar data
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # daily, 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch the Scholar profile
+        # a refused request leaves the last good data in place
+        run: python scripts/update_scholar.py || echo "Scholar fetch failed; keeping existing data"
+      - name: Commit if the numbers changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/scholar.json
+          # ignore a change of the date alone
+          if git diff --cached -U0 data/scholar.json | grep -E '^[+-] ' | grep -vq '"updated"'; then
+            git commit -m "Refresh Google Scholar data"
+            git push
+          else
+            echo "No change in citations"
+          fi

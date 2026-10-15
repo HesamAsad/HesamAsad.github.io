@@ -1,0 +1,114 @@
+{
+ "updated": "2026-10-15",
+ "profile": "https://scholar.google.com/citations?user=cL60wssAAAAJ",
+ "citations": 44,
+ "h_index": 4,
+ "i10_index": 1,
+ "papers": {
+  "cL60wssAAAAJ:KlAtU1dfN6UC": {
+   "title": "ORCA: Hunting Compositional Failures in Text-to-Image Diffusion",
+   "cites": 0,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:MXK_kJrjxJIC": {
+   "title": "TRACER: Persistent Regularization for Robust Multimodal Finetuning",
+   "cites": 0,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:3fE2CSJIrl8C": {
+   "title": "Softmax is not Enough (for Adaptive Conformal Classification)",
+   "cites": 0,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:8k81kl-MbHgC": {
+   "title": "Self-supervised learning for a gene program-centric view of cell states",
+   "cites": 1,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:5nxA0vEk-isC": {
+   "title": "Celcomen: spatial causal disentanglement for single-cell and tissue perturbation modeling",
+   "cites": 18,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:hqOjcs7Dif8C": {
+   "title": "Predicting how perturbations reshape cellular trajectories with PerturbGen",
+   "cites": 3,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:roLk4NBRz8UC": {
+   "title": "DirMoE: Dirichlet-routed Mixture of Experts",
+   "cites": 3,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:kNdYIx-mwKoC": {
+   "title": "Shortest-Path Flow Matching with Mixture-Conditioned Bases for OOD Generalization to Unseen Conditions",
+   "cites": 0,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:UebtZRa9Y70C": {
+   "title": "Softmax is not Enough (for Adaptive Conformal Classification)",
+   "cites": 0,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:Se3iqnhoufwC": {
+   "title": "POMP: A Theoretical Approach to Mitigate Forgetting in Finetuning Multi-Modal Models",
+   "cites": 0,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:LkGwnXOMwfcC": {
+   "title": "Mixflow: Mixture-conditioned flow matching for out-of-distribution generalization",
+   "cites": 2,
+   "year": 2026
+  },
+  "cL60wssAAAAJ:ufrVoPGSRksC": {
+   "title": "On the Potential of the Four-Point Model for Studying the Role of Optimization in Robustness to Spurious Correlations",
+   "cites": 0,
+   "year": 2025
+  },
+  "cL60wssAAAAJ:eQOLeE2rZwMC": {
+   "title": "GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs",
+   "cites": 5,
+   "year": 2025
+  },
+  "cL60wssAAAAJ:WF5omc3nYNoC": {
+   "title": "GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs",
+   "cites": 0,
+   "year": 2025
+  },
+  "cL60wssAAAAJ:YsMSGLbcyi4C": {
+   "title": "Integrating multi-covariate disentanglement with counterfactual analysis on synthetic data enables cell type discovery and counterfactual predictions.",
+   "cites": 4,
+   "year": 2025
+  },
+  "cL60wssAAAAJ:IjCSPb-OGe4C": {
+   "title": "Exploiting What Trained Models Learn for Making Them Robust to Spurious Correlations without Group Annotations",
+   "cites": 4,
+   "year": 2025
+  },
+  "cL60wssAAAAJ:qjMakFHDy7sC": {
+   "title": "Workshop on Spurious Correlation and Shortcut Learning: Foundations and Solutions",
+   "cites": 0,
+   "year": 2025
+  },
+  "cL60wssAAAAJ:2osOgNQ5qMEC": {
+   "title": "Trained Models Tell Us How to Make Them Robust to Spurious Correlation without Group Annotation",
+   "cites": 2,
+   "year": 2024
+  },
+  "cL60wssAAAAJ:UeHWp8X0CEIC": {
+   "title": "Sequence-to-sequence modeling for Temporal Reconstruction of Cellular Events",
+   "cites": 0,
+   "year": 2024
+  },
+  "cL60wssAAAAJ:u5HHmVD_uO8C": {
+   "title": "Annotation-Free Group Robustness via Loss-Based Resampling",
+   "cites": 2,
+   "year": 2023
+  },
+  "cL60wssAAAAJ:9yKSN-GCB0IC": {
+   "title": "Disentangling Covariates to Predict Counterfactuals for Single-cell Data",
+   "cites": 0,
+   "year": 2023
+  }
+ }
+}

@@ -1,880 +1,412 @@
 <!doctype html>
-<html lang="en" class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <!-- begin SEO -->
-        <title>About Me - Hesam Asadollahzadeh</title>
-        <meta name="google-site-verification" content="Uxo_v0B3Gd9K8P9da0i1iwIKerCc1I0iRF2604QVtBM" />
-        <meta content="Hesam Asadollahzadeh" name="description">
-        <meta content="Hesam Asadollahzadeh, Curriculum Vitae, CV, Machine Learning, Deep Learning, AI, Artificial Intelligence, Computer Engineering, University of Melbourne, Trustworthy Machine Learning, Distributional Robustness"  name="keywords">
-        <meta content="Hesam Asadollahzadeh" name="author">
-        <meta property="og:locale" content="en-US">
-        <meta property="og:site_name" content="Hesam Asadollahzadeh">
-        <meta property="og:title" content="About Me">
-        <link rel="canonical" href="http://HesamAsad.github.io">
-        <meta property="og:url" content="http://HesamAsad.github.io">
-        <meta property="og:description" content="About me">
-        <!-- <meta name="twitter:site" content="@"> -->
-        <meta name="twitter:title" content="About Me">
-        <meta name="twitter:description" content="About me">
-        <meta name="twitter:url" content="http://HesamAsad.github.io">
-        <meta name="twitter:card" content="summary">
-        <script type="application/ld+json">
-             { 
-                "@context" : "http://schema.org", 
-                "@type" : "Person", 
-                "name" : "Hesam Asadollahzadeh", 
-                "url" : "http://HesamAsad.github.io", 
-                "sameAs" : null 
-            } 
-        </script>
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-        </script>
-        <link rel="stylesheet" href="assets/css/main.css">
-        <meta http-equiv="cleartype" content="on">
-        <meta name="msapplication-TileColor" content="#000000">
-        <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="assets/css/academicons.css"/>
-        <script type="text/x-mathjax-config">
-             MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); 
-        </script>
-        <script type="text/x-mathjax-config">
-             MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } }); 
-        </script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet' type='text/css'>
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-        <link rel="manifest" href="images/site.webmanifest">
-        
-        <style>
-            :root {
-                --primary-color: #4f46e5;
-                --secondary-color: #3730a3;
-                --accent-color: #6366f1;
-                --text-color: #374151;
-                --text-light: #9ca3af;
-                --bg-light: #fafafa;
-                --border-color: #f3f4f6;
-                --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-                --shadow-lg: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            body {
-                font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                line-height: 1.6;
-                color: var(--text-color);
-                font-weight: 400;
-                letter-spacing: -0.01em;
-            }
-
-            .justified-text {
-                text-align: justify;
-                line-height: 1.7;
-            }
-
-            /* Animations */
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            @keyframes fadeInLeft {
-                from {
-                    opacity: 0;
-                    transform: translateX(-30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-
-            @keyframes pulse {
-                0%, 100% {
-                    transform: scale(1);
-                }
-                50% {
-                    transform: scale(1.05);
-                }
-            }
-
-            .animate-fade-in-up {
-                animation: fadeInUp 0.8s ease-out forwards;
-            }
-
-            .animate-fade-in-left {
-                animation: fadeInLeft 0.8s ease-out forwards;
-            }
-
-            .animate-pulse {
-                animation: pulse 2s infinite;
-            }
-
-            /* Minimalist Cards */
-            .publication-card, .news-item, .project-card {
-                background: white;
-                border-radius: 4px;
-                padding: 1rem;
-                margin-bottom: 1rem;
-                box-shadow: var(--shadow);
-                transition: all 0.2s ease;
-                border: 1px solid var(--border-color);
-            }
-
-            .publication-card:hover, .project-card:hover {
-                transform: translateY(-1px);
-                box-shadow: var(--shadow-lg);
-            }
-
-            .news-item {
-                border-left: 2px solid var(--primary-color);
-                background: white;
-            }
-
-            /* Minimalist Author Section */
-            .author__avatar img {
-                border-radius: 50%;
-                border: 2px solid var(--border-color);
-                transition: all 0.2s ease;
-            }
-
-            .author__avatar:hover img {
-                border-color: var(--primary-color);
-            }
-
-            .author__name {
-                color: var(--text-color);
-                font-weight: 600;
-                font-size: 1.4rem;
-                letter-spacing: -0.02em;
-            }
-
-            .author__bio {
-                color: var(--text-light);
-                font-weight: 400;
-                font-size: 1rem;
-            }
-
-            /* Minimalist Social Links */
-            .author__urls a {
-                transition: all 0.2s ease;
-                border-radius: 4px;
-                padding: 0.4rem;
-                margin: 0.1rem 0;
-                display: flex;
-                align-items: center;
-            }
-
-            .author__urls a:hover {
-                background: var(--bg-light);
-                color: var(--primary-color);
-            }
-
-            .author__urls p {
-                margin: 0.5rem 0;
-                padding: 0.4rem;
-                line-height: 1.3;
-                font-size: 0.9rem;
-            }
-
-            .author__content {
-                margin-bottom: 0.5rem;
-            }
-
-            .author__urls-wrapper {
-                margin-top: 0.5rem;
-            }
-
-            /* Minimalist Navigation */
-            .masthead {
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(10px);
-                border-bottom: 1px solid var(--border-color);
-                position: sticky;
-                top: 0;
-                z-index: 1000;
-            }
-
-            .masthead__menu-item a {
-                transition: all 0.2s ease;
-                border-radius: 4px;
-                padding: 0.5rem 1rem;
-            }
-
-            .masthead__menu-item a:hover {
-                background: var(--bg-light);
-                color: var(--primary-color);
-            }
-
-            /* Minimalist Sections */
-            .page__content h2 {
-                color: var(--text-color);
-                font-weight: 600;
-                font-size: 1.5rem;
-                margin-top: 2.5rem;
-                margin-bottom: 1rem;
-                position: relative;
-                padding-bottom: 0.3rem;
-                letter-spacing: -0.02em;
-            }
-
-            .page__content h2::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 30px;
-                height: 1px;
-                background: var(--primary-color);
-            }
-
-            /* Citation Metrics */
-            .citation-metrics {
-                display: flex;
-                gap: 1rem;
-                margin: 1rem 0;
-                flex-wrap: wrap;
-            }
-
-            .metric-item {
-                background: var(--bg-light);
-                padding: 0.5rem 0.75rem;
-                border-radius: 4px;
-                text-align: center;
-                border: 1px solid var(--border-color);
-                transition: all 0.2s ease;
-            }
-
-            .metric-item:hover {
-                background: white;
-                border-color: var(--primary-color);
-            }
-
-            .metric-number {
-                font-size: 1.25rem;
-                font-weight: 600;
-                display: block;
-                color: var(--primary-color);
-            }
-
-            .metric-label {
-                font-size: 0.8rem;
-                color: var(--text-light);
-            }
-
-            /* Publication styling */
-            .publication-title {
-                color: var(--text-color);
-                font-weight: 500;
-                margin-bottom: 0.4rem;
-                line-height: 1.4;
-                font-size: 1rem;
-                letter-spacing: -0.01em;
-            }
-
-            .publication-authors {
-                color: var(--text-light);
-                margin-bottom: 0.3rem;
-                font-size: 0.9rem;
-            }
-
-            .publication-venue {
-                font-style: italic;
-                color: var(--text-light);
-                margin-bottom: 0.5rem;
-                font-size: 0.9rem;
-            }
-
-            .publication-links a {
-                display: inline-block;
-                background: var(--bg-light);
-                color: var(--primary-color);
-                padding: 0.25rem 0.6rem;
-                border-radius: 4px;
-                text-decoration: none;
-                margin-right: 0.4rem;
-                margin-bottom: 0.3rem;
-                font-size: 0.8rem;
-                border: 1px solid var(--border-color);
-                transition: all 0.2s ease;
-            }
-
-            .publication-links a:hover {
-                background: var(--primary-color);
-                color: white;
-                border-color: var(--primary-color);
-            }
-
-            /* Code and Tech Elements */
-            code, .code, .tech-term {
-                font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
-                font-size: 0.9em;
-                background: var(--bg-light);
-                padding: 0.2em 0.4em;
-                border-radius: 3px;
-                border: 1px solid var(--border-color);
-                font-weight: 400;
-            }
-
-            /* Enhanced Typography */
-            h1, h2, h3, h4, h5, h6 {
-                font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-                letter-spacing: -0.02em;
-            }
-
-            .publication-venue, .publication-authors {
-                font-family: 'Poppins', sans-serif;
-            }
-
-            /* Responsive Design */
-            @media (max-width: 768px) {
-                .citation-metrics {
-                    justify-content: center;
-                }
-                
-                .metric-item {
-                    flex: 1;
-                    min-width: 120px;
-                }
-            }
-
-            /* Loading animation for elements */
-            .fade-in {
-                opacity: 0;
-                animation: fadeInUp 0.8s ease-out forwards;
-            }
-
-            .fade-in:nth-child(1) { animation-delay: 0.1s; }
-            .fade-in:nth-child(2) { animation-delay: 0.2s; }
-            .fade-in:nth-child(3) { animation-delay: 0.3s; }
-            .fade-in:nth-child(4) { animation-delay: 0.4s; }
-            .fade-in:nth-child(5) { animation-delay: 0.5s; }
-
-            /* Enhanced footer */
-            .page__footer {
-                background: var(--bg-light);
-                border-top: 1px solid var(--border-color);
-                margin-top: 4rem;
-            }
-
-            /* Smooth scrolling */
-            html {
-                scroll-behavior: smooth;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="masthead">
-            <div class="masthead__inner-wrap">
-                <div class="masthead__menu">
-                    <nav id="site-nav" class="greedy-nav">
-                        <button>
-                            <div class="navicon"></div>
-                        </button>
-                        <ul class="visible-links">
-                            <li class="masthead__menu-item masthead__menu-item--lg">
-                                <a href="http://HesamAsad.github.io">Hesam Asadollahzadeh</a>
-                            </li>
-                            <li class="masthead__menu-item">
-                                <a href="http://HesamAsad.github.io/teaching">Teaching</a>
-                            </li>
-                            <li class="masthead__menu-item">
-                                <a href="http://HesamAsad.github.io/projects">Projects</a>
-                            </li>
-                        </ul>
-                        <ul class="hidden-links hidden"></ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div id="main" role="main">
-            <div class="sidebar sticky">
-                <div itemscope itemtype="http://schema.org/Person" class="animate-fade-in-left">
-                    <div class="author__avatar">
-                        <img src="images/profile.jpg" class="author__avatar" alt="Hesam Asadollahzadeh">
-                    </div>
-                    <div class="author__content">
-                        <h3 class="author__name">Hesam Asadollahzadeh</h3>
-                        <p class="author__bio">Ph.D. Student</p>
-                    </div>
-                    <div class="author__urls-wrapper">
-                        <button class="btn btn--inverse">Follow</button>
-                        <ul class="author__urls social-icons">
-                            <p>
-                                <i class="fa fa-fw fa-university" aria-hidden="true"></i>
-                                The University of Melbourne<br>
-                                ADM+S Centre of Excellence
-                            </p>
-                            <li>
-                                <a href="mailto:asadollahzah@unimelb.edu.au">
-                                    <i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
-                                    Email
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://scholar.google.com/citations?user=cL60wssAAAAJ&hl=en">
-                                    <i class="fas fa-fw fa-graduation-cap"></i>
-                                    Google Scholar
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/HesamAsad">
-                                    <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-                                    Github
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/hesamasadzadeh">
-                                    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
-                                    LinkedIn
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/HesamAsdz">
-                                    <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i>
-                                    X (Twitter)
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-                <meta itemprop="headline" content="Home">
-                <meta itemprop="description" content="About me">
-                <div class="page__inner-wrap">
-                    <header>
-                        <h1 class="page__title animate-fade-in-up" itemprop="headline">Home</h1>
-                    </header>
-                    <section class="page__content" itemprop="text">
-                        <div class="justified-text animate-fade-in-up">
-                            <p>
-                                Greetings! I am a Ph.D. student at <span style="color: var(--primary-color); font-weight: 600;">The University of Melbourne</span>, working within the <strong>ADM+S Centre of Excellence for Automated Decision-Making and Society</strong>. My research focuses on <strong>distributional robustness in vision-language models</strong>, supervised by <a href="#">Prof. Christopher Leckie</a> and <a href="#">Dr. Sarah Erfani</a>.
-                            </p>
-                            <p>
-                                My thesis investigates theoretical aspects and scalable methods to enhance out-of-distribution (OOD) generalization in contrastive methods and foundation vision-language models. My broader research interests encompass <strong>trustworthy machine learning</strong>, with particular emphasis on distributional and adversarial robustness, deep generative models, computational biology, and self-supervised learning.
-                            </p>
-                        </div>
-
-                        <!-- Citation Metrics (Google Scholar, Aug 2026) -->
-                        <div class="citation-metrics animate-fade-in-up">
-                            <div class="metric-item">
-                                <span class="metric-number">32</span>
-                                <span class="metric-label">Citations</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-number">3</span>
-                                <span class="metric-label">h-index</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-number">15</span>
-                                <span class="metric-label">Publications</span>
-                            </div>
-                        </div>
-                        <p class="tiny" style="margin-top:-.4em; margin-bottom:1.2em; color:var(--text-light); font-size:.85rem;">
-                            Metrics from <a href="https://scholar.google.com/citations?user=cL60wssAAAAJ&hl=en" target="_blank">Google Scholar</a>. Duplicates (preprint vs camera-ready) are counted once.
-                        </p>
-
-                        <h2 id="selected-publications">Selected Publications</h2>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Celcomen: spatial causal disentanglement for single-cell and tissue perturbation modeling</h3>
-                            <p class="publication-authors">S Megas, DG Chen, K Polanski, <strong>H Asadollahzadeh</strong>, M Eliasof, CB Schönlieb, SA Teichmann</p>
-                            <p class="publication-venue">Nature Communications 17, 4126, 2026 &nbsp;·&nbsp; ICLR 2025</p>
-                            <div class="publication-links">
-                                <a href="https://www.nature.com/articles/s41467-026-69856-5" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
-                                <a href="https://arxiv.org/abs/2409.05804" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv</a>
-                                <a href="https://openreview.net/forum?id=Tqdsruwyac" target="_blank"><i class="fas fa-external-link-alt"></i> OpenReview</a>
-                                <a href="https://doi.org/10.1038/s41467-026-69856-5" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cL60wssAAAAJ&citation_for_view=cL60wssAAAAJ:5nxA0vEk-isC" target="_blank"><i class="fas fa-quote-right"></i> 13 Citations</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs</h3>
-                            <p class="publication-authors">AY Parast, P Hosseini, <strong>H Asadollahzadeh</strong>, AS Moakhar, B Azam, S Feizi, N Akhtar</p>
-                            <p class="publication-venue">ICLR 2026 Poster</p>
-                            <div class="publication-links">
-                                <a href="https://openreview.net/forum?id=f4TACE7HhU" target="_blank"><i class="fas fa-external-link-alt"></i> OpenReview</a>
-                                <a href="https://arxiv.org/abs/2509.25178" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv</a>
-                                <a href="https://github.com/sudoparsa/GHOST" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cL60wssAAAAJ&citation_for_view=cL60wssAAAAJ:eQOLeE2rZwMC" target="_blank"><i class="fas fa-quote-right"></i> 3 Citations</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">DirMoE: Dirichlet-Routed Mixture of Experts</h3>
-                            <p class="publication-authors">A Vahidi, <strong>H Asadollahzadeh</strong>, NA Attar, M Moullet, K Ly, X Yang, M Lotfollahi</p>
-                            <p class="publication-venue">ICLR 2026 Poster</p>
-                            <div class="publication-links">
-                                <a href="https://openreview.net/forum?id=a15cDnzr6r" target="_blank"><i class="fas fa-external-link-alt"></i> OpenReview</a>
-                                <a href="https://arxiv.org/abs/2602.09001" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cL60wssAAAAJ&citation_for_view=cL60wssAAAAJ:roLk4NBRz8UC" target="_blank"><i class="fas fa-quote-right"></i> 2 Citations</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Softmax is not Enough (for Adaptive Conformal Classification)</h3>
-                            <p class="publication-authors">N Akhavan Attar, <strong>H Asadollahzadeh</strong>, L Luo, U Aickelin</p>
-                            <p class="publication-venue">ICLR 2026 Poster</p>
-                            <div class="publication-links">
-                                <a href="https://openreview.net/forum?id=zCwTMRtASZ" target="_blank"><i class="fas fa-external-link-alt"></i> OpenReview</a>
-                                <a href="https://arxiv.org/abs/2602.19498" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">TRACER: Persistent Regularization for Robust Multimodal Finetuning</h3>
-                            <p class="publication-authors"><strong>H Asadollahzadeh</strong>, F Liu, C Leckie, SM Erfani</p>
-                            <p class="publication-venue">ICML 2026</p>
-                            <div class="publication-links">
-                                <a href="https://openreview.net/forum?id=XOYXLQRlj8" target="_blank"><i class="fas fa-external-link-alt"></i> OpenReview</a>
-                                <a href="https://arxiv.org/abs/2605.29380" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv</a>
-                                <a href="https://github.com/HesamAsad/TRACER" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Predicting how perturbations reshape cellular trajectories with PerturbGen</h3>
-                            <p class="publication-authors">KCH Ly, A Miraki Feriz, T Isobe, A Vahidi, D Vaghari, A Rostron, … <strong>H Asadollahzadeh</strong>, … M Lotfollahi</p>
-                            <p class="publication-venue">bioRxiv preprint, 2026</p>
-                            <div class="publication-links">
-                                <a href="https://www.biorxiv.org/content/10.64898/2026.03.04.709254v1" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
-                                <a href="https://doi.org/10.64898/2026.03.04.709254" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cL60wssAAAAJ&citation_for_view=cL60wssAAAAJ:hqOjcs7Dif8C" target="_blank"><i class="fas fa-quote-right"></i> 2 Citations</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Shortest-Path Flow Matching with Mixture-Conditioned Bases for OOD Generalization to Unseen Conditions</h3>
-                            <p class="publication-authors">A Rubbi, A Akbarnejad, MV Sanian, AY Parast, <strong>H Asadollahzadeh</strong>, A Amani, N Akhtar, S Cooper, A Bassett, P Liò, L Paavolainen, S Vakili, M Lotfollahi</p>
-                            <p class="publication-venue">arXiv preprint arXiv:2601.11827, 2026</p>
-                            <div class="publication-links">
-                                <a href="https://arxiv.org/abs/2601.11827" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cL60wssAAAAJ&citation_for_view=cL60wssAAAAJ:LkGwnXOMwfcC" target="_blank"><i class="fas fa-quote-right"></i> 2 Citations</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Self-supervised learning for a gene program-centric view of cell states</h3>
-                            <p class="publication-authors">M Moullet, T Isobe, A Vahidi, C Leonardi, L Paulas-Condori, C Soelistyo, … <strong>H Asadollahzadeh</strong>, …</p>
-                            <p class="publication-venue">bioRxiv preprint, 2026</p>
-                            <div class="publication-links">
-                                <a href="https://www.biorxiv.org/content/10.1101/2026.03.24.713961v1" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Integrating multi-covariate disentanglement with counterfactual analysis on synthetic data enables cell type discovery and counterfactual predictions</h3>
-                            <p class="publication-authors">S Megas, A Amani, A Rose, O Dufva, K Shamsaie, <strong>H Asadollahzadeh</strong>, K Polanski, M Haniffa, SA Teichmann, M Lotfollahi</p>
-                            <p class="publication-venue">bioRxiv preprint, 2025</p>
-                            <div class="publication-links">
-                                <a href="https://www.biorxiv.org/content/10.1101/2025.06.03.657578v1" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
-                                <a href="https://doi.org/10.1101/2025.06.03.657578" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cL60wssAAAAJ&citation_for_view=cL60wssAAAAJ:YsMSGLbcyi4C" target="_blank"><i class="fas fa-quote-right"></i> 3 Citations</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Exploiting What Trained Models Learn for Making Them Robust to Spurious Correlations without Group Annotations</h3>
-                            <p class="publication-authors">M Ghaznavi, <strong>H Asadollahzadeh</strong>, FH Noohdani, SV Tabar, H Hasani, T Akbari Alvanagh, MH Rohban, MS Baghshah</p>
-                            <p class="publication-venue">SCSL @ ICLR 2025</p>
-                            <div class="publication-links">
-                                <a href="https://openreview.net/forum?id=8vo1YSAt6g" target="_blank"><i class="fas fa-external-link-alt"></i> OpenReview</a>
-                                <a href="https://arxiv.org/abs/2410.05345" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cL60wssAAAAJ&citation_for_view=cL60wssAAAAJ:IjCSPb-OGe4C" target="_blank"><i class="fas fa-quote-right"></i> 3 Citations</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">On the Potential of the Four-Point Model for Studying the Role of Optimization in Robustness to Spurious Correlations</h3>
-                            <p class="publication-authors">M Ghaznavi, <strong>H Asadollahzadeh</strong></p>
-                            <p class="publication-venue">NeurIPS 2025 Workshop (OPT)</p>
-                            <div class="publication-links">
-                                <a href="https://openreview.net/forum?id=WWswE1WTLQ" target="_blank"><i class="fas fa-external-link-alt"></i> OpenReview</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Trained Models Tell Us How to Make Them Robust to Spurious Correlation without Group Annotation</h3>
-                            <p class="publication-authors">M Ghaznavi, <strong>H Asadollahzadeh</strong>, FH Noohdani, SV Tabar, H Hasani, T Akbari Alvanagh, MH Rohban, MS Baghshah</p>
-                            <p class="publication-venue">arXiv preprint arXiv:2410.05345, 2024</p>
-                            <div class="publication-links">
-                                <a href="https://arxiv.org/abs/2410.05345" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv</a>
-                                <a href="https://openreview.net/forum?id=8vo1YSAt6g" target="_blank"><i class="fas fa-external-link-alt"></i> OpenReview</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cL60wssAAAAJ&citation_for_view=cL60wssAAAAJ:2osOgNQ5qMEC" target="_blank"><i class="fas fa-quote-right"></i> 2 Citations</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Sequence-to-sequence modeling for Temporal Reconstruction of Cellular Events</h3>
-                            <p class="publication-authors">A Vahidi, K Ly, <strong>H Asadollahzadeh</strong>, M Moullet, V Baskar, E Stephenson, M Lotfollahi</p>
-                            <p class="publication-venue">ICLR 2025 (withdrawn)</p>
-                            <div class="publication-links">
-                                <a href="https://openreview.net/forum?id=PHESUVacAw" target="_blank"><i class="fas fa-external-link-alt"></i> OpenReview</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Annotation-Free Group Robustness via Loss-Based Resampling</h3>
-                            <p class="publication-authors">M Ghaznavi, <strong>H Asadollahzadeh</strong>, HRY Araghi, FH Noohdani, MH Rohban, MS Baghshah</p>
-                            <p class="publication-venue">arXiv preprint arXiv:2312.04893, 2023</p>
-                            <div class="publication-links">
-                                <a href="https://arxiv.org/abs/2312.04893" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv</a>
-                                <a href="https://drive.google.com/file/d/13uqbZ5-Nab0YIBHVKV3MjkuG9MAUdYb9/view?usp=sharing" target="_blank"><i class="fas fa-presentation"></i> Poster</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cL60wssAAAAJ&citation_for_view=cL60wssAAAAJ:u5HHmVD_uO8C" target="_blank"><i class="fas fa-quote-right"></i> 2 Citations</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-card fade-in">
-                            <h3 class="publication-title">Disentangling Covariates to Predict Counterfactuals for Single-cell Data</h3>
-                            <p class="publication-authors">K Shamsaie, S Megas, <strong>H Asadollahzadeh</strong>, SA Teichmann, M Lotfollahi</p>
-                            <p class="publication-venue">2023</p>
-                        </div>
-
-                        <h2 id="news">News</h2>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[05/2026]</strong> Our paper "<strong>TRACER: Persistent Regularization for Robust Multimodal Finetuning</strong>" has been accepted to <strong>ICML 2026</strong>! <a href="https://openreview.net/forum?id=XOYXLQRlj8" target="_blank">OpenReview</a> · <a href="https://arxiv.org/abs/2605.29380" target="_blank">arXiv</a> · <a href="https://github.com/HesamAsad/TRACER" target="_blank">GitHub</a>.
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[03/2026]</strong> "<strong>Celcomen: spatial causal disentanglement for single-cell and tissue perturbation modeling</strong>" is published in <a href="https://www.nature.com/articles/s41467-026-69856-5" target="_blank">Nature Communications</a>! 🎉
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[03/2026]</strong> "<strong>Predicting how perturbations reshape cellular trajectories with PerturbGen</strong>" is now available on <a href="https://www.biorxiv.org/content/10.64898/2026.03.04.709254v1" target="_blank">bioRxiv</a>.
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[01/2026]</strong> Three papers accepted to <strong>ICLR 2026</strong> as posters: <a href="https://openreview.net/forum?id=f4TACE7HhU" target="_blank">GHOST</a>, <a href="https://openreview.net/forum?id=a15cDnzr6r" target="_blank">DirMoE</a>, and <a href="https://openreview.net/forum?id=zCwTMRtASZ" target="_blank">Softmax is not Enough</a>! 🎉
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[09/2025]</strong> Our paper "<strong>GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs</strong>" is now available on <a href="https://arxiv.org/abs/2509.25178" target="_blank">arXiv</a>.
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[06/2025]</strong> Our paper "<strong>Integrating multi-covariate disentanglement with counterfactual analysis on synthetic data enables cell type discovery and counterfactual predictions</strong>" is now available on <a href="https://www.biorxiv.org/content/10.1101/2025.06.03.657578v1" target="_blank">bioRxiv</a>.
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[03/2025]</strong> Our paper "<strong>Exploiting What Trained Models Learn for Making Them Robust to Spurious Correlations without Group Annotations</strong>" has been published at the <a href="https://openreview.net/forum?id=8vo1YSAt6g" target="_blank">ICLR 2025 Workshop on Spurious Correlation and Shortcut Learning</a>! 🎉
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[02/2025]</strong> Started my Ph.D. journey at <strong>The University of Melbourne</strong> as part of the ADM+S Centre of Excellence, focusing on distributional robustness in vision-language models.
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[01/2025]</strong> Excited to announce that our workshop proposal "<strong>Workshop on Spurious Correlation and Shortcut Learning: Foundations and Solutions</strong>" has been accepted for ICLR 2025! 🎉
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[10/2024]</strong> Our paper "<strong>Trained Models Tell Us How to Make Them Robust to Spurious Correlation without Group Annotation</strong>" is now available on <a href="https://arxiv.org/abs/2410.05345">arXiv</a>.
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[12/2023]</strong> Our pre-print "<strong>Annotation-Free Group Robustness via Loss-Based Resampling</strong>" is now public at <a href="https://arxiv.org/abs/2312.04893">arXiv</a> [<a href="https://drive.google.com/file/d/13uqbZ5-Nab0YIBHVKV3MjkuG9MAUdYb9/view?usp=sharing">Poster</a>].
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[09/2023]</strong> Thrilled to share that the following papers have been accepted to <a href="https://iccv2023.thecvf.com/">ICCV 2023</a> - <a href="http://www.ood-cv.org/">OOD Generalization in Computer Vision Workshop</a>🎉:
-                                <ul style="margin-top: 0.5rem;">
-                                    <li><em>Data-Driven Annotation-Free Group Robustness Across Extremely Unbalanced Group Sizes</em><br/>
-                                    Ghaznavi M., <strong>Asadollahzadeh H.</strong>, Yaghoubi H., Hosseini F., Rohban M., Soleymani M.<br/>
-                                    <a href="https://github.com/eccv22-ood-workshop/eccv22-ood-workshop.github.io/blob/new/camera_ready/CameraReady%2059.pdf">Paper</a>, <a href="https://drive.google.com/file/d/1SDtxY4S-AvE7ZSD9mQc4D9bkU2Q99cqD/view?usp=drive_link">Slides</a>
-                                    </li>
-                                    <li><em>Evaluating Robustness of Pre-Trained Deep Neural Networks Against Spurious Correlations</em><br/>
-                                    Taherkhani M., Hoseinpour A., Hosseini F., <strong>Asadollahzadeh H.</strong>, Soleymani M.<br/>
-                                    <a href="https://github.com/eccv22-ood-workshop/eccv22-ood-workshop.github.io/blob/new/camera_ready/CameraReady%2063.pdf">Paper</a>, <a href="https://drive.google.com/file/d/1JLXGmltZZvZ5_tyWbZeb129s9rEW-pJr/view?usp=sharing">Slides</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="news-item fade-in">
-                            <div class="justified-text">
-                                <strong>[05/2023]</strong> Joined the <strong>Machine Learning Lab (MLL)</strong> at Sharif University of Technology, conducting research under the supervision of <a href="https://scholar.google.com/citations?user=S1U0KlgAAAAJ&hl=en">Dr. Mahdieh Soleymani Baghshah</a> and <a href="https://scholar.google.com/citations?user=pRyJ6FkAAAAJ&hl=en">Dr. Mohammad Hossein Rohban</a> in collaboration with <strong>Robust and Interpretable Machine Learning Lab (RIML)</strong>.
-                            </div>
-                        </div>
-                        
-                        <h2 id="selected-talks-full-list-talk-map">
-                            Selected Talks
-                        </h2>
-                        <div class="project-card fade-in">
-                            <div class="archive__item-teaser_single_cv">
-                                <div class="box">
-                                    <img src="images/deepgenerative.png" alt="Deep Generative Models Talk"/>
-                                </div>
-                                <div class="text">
-                                    <h3 class="archive__item-title" itemprop="headline">
-                                        Deep Generative Models, Pushing the Limits of Creativity
-                                    </h3>
-                                    <p class="archive__item-excerpt" itemprop="description" style="font-size:0.85em">
-                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                        May 24, 2023
-                                    </p>
-                                </div>
-                            </div>
-                            <div style="display: flex; justify-content: center; margin-top: 1rem;">
-                                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSgqFD-wpQyPaKwL2owPkrxnjTORlioX6KkUmnESu0eENsW4Fb0jNw-T3U-Rfdj5tMYOpkMhM4Gd9lW/embed?start=false&loop=true&delayms=5000" frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="border-radius: 8px; box-shadow: var(--shadow);"></iframe>
-                            </div>
-                        </div>
-                        
-                        <h2 id="selected-projects-full-list">
-                            Selected Projects (<a href="/projects">Full List</a>)
-                        </h2>
-                        
-                        <div class="project-card fade-in">
-                            <div class="archive__item-teaser_single_cv">
-                                <div class="box">
-                                    <img src="images/CA5.png" alt="BERT_picture"/>
-                                </div>
-                                <div class="text">
-                                    <h3 class="archive__item-title" itemprop="headline">
-                                        Transformers, BERT, and BEIT
-                                    </h3>
-                                    <p class="archive__item-excerpt" itemprop="description" style="font-size:0.85em">
-                                        BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,<br/>
-                                        BEIT: BERT Pre-Training of Image Transformers,<br/>
-                                        Neural Networks & Deep Learning,<br/>
-                                        Dr. Ahmad Kalhor,<br/>
-                                        Autumn 2022
-                                    </p>
-                                    <div class="section-3 w-100">
-                                        <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA5/" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i>Github</a>
-                                        <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA5/blob/main/HW5-Report.pdf" target="_blank">Report (Persian)</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card fade-in">
-                            <div class="archive__item-teaser_single_cv">
-                                <div class="box">
-                                    <img src="images/CA6.png" alt="GAN_picture"/>
-                                </div>
-                                <div class="text">
-                                    <h3 class="archive__item-title" itemprop="headline">
-                                        Generative Adversarial Networks (DCGAN, AC-GAN, Wasserstein Loss, and WGAN)
-                                    </h3>
-                                    <p class="archive__item-excerpt" itemprop="description" style="font-size:0.85em">
-                                        Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks, <br/>
-                                        Conditional Image Synthesis With Auxiliary Classifier GANs,<br/>
-                                        Wasserstein GAN (WGANs) (Arjovsky et al. 2017),<br/>
-                                        Neural Networks & Deep Learning,<br/>
-                                        Dr. Ahmad Kalhor,<br/>
-                                        Autumn 2022
-                                    </p>
-                                    <div class="section-3 w-100">
-                                        <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA6/" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i>Github</a>
-                                        <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA6/blob/main/HW6-Report.pdf" target="_blank">Report (Persian)</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </section>
-                    <footer class="page__meta"></footer>
-                </div>
-            </article>
-        </div>
-        <div class="page__footer">
-            <footer>
-                <div class="page__footer-follow">
-                    <ul class="social-icons">
-                        <li>
-                            <strong>Follow:</strong>
-                        </li>
-                        <li>
-                            <a href="http://github.com/HesamAsad">
-                                <i class="fab fa-github" aria-hidden="true"></i>
-                                GitHub
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="page__footer-copyright">
-                    &copy;2024 Hesam Asadollahzadeh. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>
-                    &amp;<a href="https://github.com/academicpages/academicpages.github.io"> AcademicPages</a>, 
-                    a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
-                </div>
-            </footer>
-        </div>
-        <script src="assets/js/main.min.js"></script>
-        <script>
-            // Add smooth animations on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all fade-in elements
-            document.querySelectorAll('.fade-in').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(el);
-            });
-
-            // Add typing effect to the main title
-            document.addEventListener('DOMContentLoaded', function() {
-                const title = document.querySelector('.page__title');
-                if (title) {
-                    title.style.opacity = '1';
-                }
-            });
-        </script>
-    </body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="Uxo_v0B3Gd9K8P9da0i1iwIKerCc1I0iRF2604QVtBM" />
+<title>Hesam Asadollahzadeh</title>
+<meta name="description" content="Hesam Asadollahzadeh, PhD student at The University of Melbourne working on distributional robustness in vision-language models.">
+<meta property="og:title" content="Hesam Asadollahzadeh">
+<meta property="og:description" content="PhD student at The University of Melbourne: distributional robustness in vision-language models.">
+<meta property="og:url" content="https://hesamasad.github.io/">
+<meta property="og:image" content="https://hesamasad.github.io/images/profile.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://hesamasad.github.io/">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Person", "name": "Hesam Asadollahzadeh", "url": "https://hesamasad.github.io/",
+ "affiliation": {"@type": "CollegeOrUniversity", "name": "The University of Melbourne"},
+ "sameAs": ["https://scholar.google.com/citations?user=cL60wssAAAAJ", "https://github.com/HesamAsad", "https://www.linkedin.com/in/hesamasadzadeh", "https://twitter.com/HesamAsdz"]}
+</script>
+<script>
+  // apply the saved theme before first paint
+  try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<style>
+  :root {
+    --bg: #fbfaf8; --surface: #ffffff; --ink: #1c1d21; --muted: #62646c; --faint: #9a9ca3; --rule: #e7e4df;
+    --accent: #3b4fd8; --accent-soft: #eceffd; --gold: #a86b12;
+    --serif: 'Newsreader', Georgia, serif; --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #121316; --surface: #1a1b1f; --ink: #ecebe7; --muted: #a3a4aa; --faint: #74767d; --rule: #2a2b31; --accent: #8c9bff; --accent-soft: #23264a; --gold: #e0a84f; }
+  }
+  :root[data-theme="dark"] { --bg: #121316; --surface: #1a1b1f; --ink: #ecebe7; --muted: #a3a4aa; --faint: #74767d; --rule: #2a2b31; --accent: #8c9bff; --accent-soft: #23264a; --gold: #e0a84f; }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* top bar */
+  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+  .top .wrap { display: flex; align-items: center; gap: 1.25rem; height: 3.6rem; }
+  .brand { font: 500 1.15rem/1 var(--serif); color: var(--ink); white-space: nowrap; }
+  .brand:hover { text-decoration: none; }
+  .nav { display: flex; gap: 1.1rem; margin-left: auto; font-size: .9rem; overflow-x: auto; scrollbar-width: none; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { color: var(--muted); white-space: nowrap; }
+  .nav a:hover, .nav a.on { color: var(--ink); text-decoration: none; }
+  .theme { border: 1px solid var(--rule); background: var(--surface); color: var(--muted); width: 2rem; height: 2rem; border-radius: 50%; cursor: pointer; flex: none; }
+  .theme:hover { color: var(--ink); }
+
+  /* hero */
+  .hero { display: grid; grid-template-columns: 148px 1fr; gap: 2rem; align-items: start; padding: 3.5rem 0 2.5rem; }
+  .hero img { width: 148px; height: 148px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
+  .hero h1 { font: 500 2.4rem/1.1 var(--serif); margin: .2rem 0 .4rem; letter-spacing: -.01em; }
+  .role { color: var(--muted); margin: 0 0 1rem; }
+  .role b { color: var(--ink); font-weight: 500; }
+  .links { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.1rem; }
+  .links a { display: inline-flex; align-items: center; gap: .45rem; padding: .32rem .75rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); color: var(--ink); font-size: .85rem; }
+  .links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+  .metrics { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1.4rem; font-size: .88rem; color: var(--muted); }
+  .metrics b { font: 500 1.35rem/1 var(--serif); color: var(--ink); margin-right: .3rem; }
+  .metrics .src { font-size: .78rem; color: var(--faint); }
+  .metrics[hidden] { display: none; }
+
+  .bio { font-size: 1.04rem; color: var(--ink); }
+  .bio p { margin: 0 0 1rem; }
+  .interests { display: flex; flex-wrap: wrap; gap: .4rem; margin: .4rem 0 0; padding: 0; list-style: none; }
+  .interests li { font-size: .8rem; color: var(--muted); background: var(--accent-soft); color: var(--accent); padding: .18rem .6rem; border-radius: 999px; }
+
+  section { padding: 2.6rem 0 .5rem; }
+  h2 { font: 500 1.6rem/1.2 var(--serif); margin: 0 0 1.1rem; display: flex; align-items: baseline; gap: .8rem; }
+  h2 .aside { font: 400 .85rem/1 var(--sans); color: var(--faint); margin-left: auto; }
+
+  /* publications */
+  .filters { display: flex; flex-wrap: wrap; gap: .4rem; margin: -.2rem 0 1.2rem; }
+  .filters button { font: 500 .8rem var(--sans); color: var(--muted); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: .28rem .8rem; cursor: pointer; }
+  .filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .year { font: 500 .8rem var(--sans); color: var(--faint); letter-spacing: .08em; margin: 1.4rem 0 .4rem; }
+  .year:first-of-type { margin-top: 0; }
+  .pubs { list-style: none; margin: 0; padding: 0; }
+  .pub { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: .85rem 0; border-top: 1px solid var(--rule); }
+  .pub[hidden] { display: none; }
+  .venue { font-size: .76rem; font-weight: 600; color: var(--accent); line-height: 1.35; padding-top: .2rem; }
+  .venue.j { color: var(--gold); }
+  .venue.p, .venue.w { color: var(--muted); }
+  .pub h3 { font: 500 1.06rem/1.35 var(--serif); margin: 0 0 .2rem; }
+  .pub h3 a { color: var(--ink); }
+  .authors { font-size: .86rem; color: var(--muted); margin: 0 0 .35rem; }
+  .authors b { color: var(--ink); font-weight: 600; }
+  .plinks { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .9rem; font-size: .82rem; }
+  .plinks .cites { color: var(--faint); }
+  .plinks .cites a { color: var(--faint); }
+  .plinks .cites a:hover { color: var(--accent); }
+  .note { font-size: .82rem; color: var(--faint); margin-top: 1rem; }
+
+  /* news */
+  .news { list-style: none; margin: 0; padding: 0; }
+  .news li { display: grid; grid-template-columns: 5.2rem 1fr; gap: 1rem; padding: .55rem 0; font-size: .94rem; }
+  .news time { font: 500 .8rem/1.9 var(--sans); color: var(--faint); font-variant-numeric: tabular-nums; }
+  .news ul { margin: .4rem 0 0; padding-left: 1.1rem; font-size: .88rem; color: var(--muted); }
+  details.more > summary { list-style: none; cursor: pointer; display: inline-block; margin-top: .6rem; font-size: .85rem; color: var(--accent); }
+  details.more > summary::-webkit-details-marker { display: none; }
+  details.more[open] > summary .o { display: none; } details.more:not([open]) > summary .c { display: none; }
+
+  /* cards */
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 1.1rem 1.2rem; display: flex; flex-direction: column; }
+  .card h3 { font: 500 1.08rem/1.3 var(--serif); margin: 0 0 .3rem; }
+  .card p { font-size: .88rem; color: var(--muted); margin: 0 0 .7rem; flex: 1; }
+  .card .k { font-size: .74rem; font-weight: 600; letter-spacing: .06em; color: var(--faint); margin-bottom: .35rem; }
+  .card .go { font-size: .86rem; font-weight: 500; }
+  .ta { list-style: none; margin: 1rem 0 0; padding: 0; font-size: .9rem; color: var(--muted); }
+  .ta li { padding: .3rem 0; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 1rem; }
+  .ta li span:last-child { color: var(--faint); white-space: nowrap; }
+
+  footer { margin: 3.5rem 0 0; padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--rule); font-size: .82rem; color: var(--faint); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; }
+
+  @media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; gap: 1.2rem; padding-top: 2.2rem; }
+    .hero img { width: 112px; height: 112px; }
+    .hero h1 { font-size: 2rem; }
+    .pub, .news li { grid-template-columns: 1fr; gap: .2rem; }
+    .cards { grid-template-columns: 1fr; }
+    .nav { gap: .9rem; }
+    .brand { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Hesam Asadollahzadeh</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a><a href="#publications">Publications</a><a href="#news">News</a><a href="#teaching">Teaching</a><a href="projects.html">Projects</a>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero" id="about">
+    <img src="images/profile.jpg" alt="Hesam Asadollahzadeh" width="148" height="148">
+    <div>
+      <h1>Hesam Asadollahzadeh</h1>
+      <p class="role">PhD student, <b>The University of Melbourne</b> · ARC Centre of Excellence for Automated Decision-Making and Society (ADM+S)</p>
+      <div class="links">
+        <a href="mailto:asadollahzah@unimelb.edu.au"><i class="fa-solid fa-envelope"></i>Email</a>
+        <a href="https://scholar.google.com/citations?user=cL60wssAAAAJ&hl=en"><i class="fa-solid fa-graduation-cap"></i>Google Scholar</a>
+        <a href="https://github.com/HesamAsad"><i class="fa-brands fa-github"></i>GitHub</a>
+        <a href="https://www.linkedin.com/in/hesamasadzadeh"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        <a href="https://twitter.com/HesamAsdz"><i class="fa-brands fa-x-twitter"></i>X</a>
+      </div>
+      <div class="metrics" id="metrics" hidden>
+        <span><b id="m-cit"></b>citations</span><span><b id="m-h"></b>h-index</span><span><b id="m-i10"></b>i10-index</span>
+        <span class="src">Google Scholar · updated <span id="m-date"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bio">
+    <p>I am a PhD student at The University of Melbourne, working on <b>distributional robustness in vision-language models</b>, supervised by <a href="https://scholar.google.com/citations?user=wUsI0cAAAAAJ">Prof. Christopher Leckie</a> and <a href="https://people.eng.unimelb.edu.au/smonazam/">Dr. Sarah Erfani</a>.</p>
+    <p>My thesis studies the theory and scalable methods for out-of-distribution generalisation in contrastive learning and foundation vision-language models. More broadly, I work on trustworthy machine learning: distributional and adversarial robustness, deep generative models, self-supervised learning and computational biology.</p>
+    <ul class="interests" aria-label="Research interests">
+      <li>OOD generalisation</li><li>Vision-language models</li><li>Adversarial robustness</li><li>Spurious correlations</li><li>Generative models</li><li>Computational biology</li>
+    </ul>
+  </div>
+
+  <section id="publications">
+    <h2>Publications <span class="aside"><a href="https://scholar.google.com/citations?user=cL60wssAAAAJ&hl=en">Full list on Google Scholar</a></span></h2>
+    <div class="filters" role="group" aria-label="Filter publications">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="c">Conference</button>
+      <button type="button" data-f="j">Journal</button>
+      <button type="button" data-f="w">Workshop</button>
+      <button type="button" data-f="p">Preprint</button>
+    </div>
+
+    <div class="year">2026</div>
+    <ul class="pubs">
+      <li class="pub" data-t="c" data-scholar="MXK_kJrjxJIC">
+        <div class="venue">ICML 2026</div>
+        <div><h3><a href="https://openreview.net/forum?id=XOYXLQRlj8">TRACER: Persistent Regularization for Robust Multimodal Finetuning</a></h3>
+          <p class="authors"><b>H Asadollahzadeh</b>, F Liu, C Leckie, SM Erfani</p>
+          <div class="plinks"><a href="https://openreview.net/forum?id=XOYXLQRlj8">OpenReview</a><a href="https://arxiv.org/abs/2605.29380">arXiv</a><a href="https://github.com/HesamAsad/TRACER">Code</a></div></div>
+      </li>
+      <li class="pub" data-t="j c" data-scholar="5nxA0vEk-isC">
+        <div class="venue j">Nature Communications 2026 · ICLR 2025</div>
+        <div><h3><a href="https://www.nature.com/articles/s41467-026-69856-5">Celcomen: spatial causal disentanglement for single-cell and tissue perturbation modeling</a></h3>
+          <p class="authors">S Megas, DG Chen, K Polanski, <b>H Asadollahzadeh</b>, M Eliasof, CB Schönlieb, SA Teichmann</p>
+          <div class="plinks"><a href="https://www.nature.com/articles/s41467-026-69856-5">Paper</a><a href="https://arxiv.org/abs/2409.05804">arXiv</a><a href="https://openreview.net/forum?id=Tqdsruwyac">OpenReview</a></div></div>
+      </li>
+      <li class="pub" data-t="c" data-scholar="eQOLeE2rZwMC WF5omc3nYNoC">
+        <div class="venue">ICLR 2026</div>
+        <div><h3><a href="https://openreview.net/forum?id=f4TACE7HhU">GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs</a></h3>
+          <p class="authors">AY Parast, P Hosseini, <b>H Asadollahzadeh</b>, AS Moakhar, B Azam, S Feizi, N Akhtar</p>
+          <div class="plinks"><a href="https://openreview.net/forum?id=f4TACE7HhU">OpenReview</a><a href="https://arxiv.org/abs/2509.25178">arXiv</a><a href="https://github.com/sudoparsa/GHOST">Code</a></div></div>
+      </li>
+      <li class="pub" data-t="c" data-scholar="roLk4NBRz8UC">
+        <div class="venue">ICLR 2026</div>
+        <div><h3><a href="https://openreview.net/forum?id=a15cDnzr6r">DirMoE: Dirichlet-Routed Mixture of Experts</a></h3>
+          <p class="authors">A Vahidi, <b>H Asadollahzadeh</b>, NA Attar, M Moullet, K Ly, X Yang, M Lotfollahi</p>
+          <div class="plinks"><a href="https://openreview.net/forum?id=a15cDnzr6r">OpenReview</a><a href="https://arxiv.org/abs/2602.09001">arXiv</a></div></div>
+      </li>
+      <li class="pub" data-t="c" data-scholar="3fE2CSJIrl8C UebtZRa9Y70C">
+        <div class="venue">ICLR 2026</div>
+        <div><h3><a href="https://openreview.net/forum?id=zCwTMRtASZ">Softmax is not Enough (for Adaptive Conformal Classification)</a></h3>
+          <p class="authors">N Akhavan Attar, <b>H Asadollahzadeh</b>, L Luo, U Aickelin</p>
+          <div class="plinks"><a href="https://openreview.net/forum?id=zCwTMRtASZ">OpenReview</a><a href="https://arxiv.org/abs/2602.19498">arXiv</a></div></div>
+      </li>
+      <li class="pub" data-t="p" data-scholar="hqOjcs7Dif8C">
+        <div class="venue p">bioRxiv 2026</div>
+        <div><h3><a href="https://www.biorxiv.org/content/10.64898/2026.03.04.709254v1">Predicting how perturbations reshape cellular trajectories with PerturbGen</a></h3>
+          <p class="authors">KCH Ly, A Miraki Feriz, T Isobe, A Vahidi, D Vaghari, A Rostron, … <b>H Asadollahzadeh</b>, … M Lotfollahi</p>
+          <div class="plinks"><a href="https://www.biorxiv.org/content/10.64898/2026.03.04.709254v1">Paper</a></div></div>
+      </li>
+      <li class="pub" data-t="p" data-scholar="kNdYIx-mwKoC LkGwnXOMwfcC">
+        <div class="venue p">arXiv 2026</div>
+        <div><h3><a href="https://arxiv.org/abs/2601.11827">Shortest-Path Flow Matching with Mixture-Conditioned Bases for OOD Generalization to Unseen Conditions</a></h3>
+          <p class="authors">A Rubbi, A Akbarnejad, MV Sanian, AY Parast, <b>H Asadollahzadeh</b>, A Amani, N Akhtar, S Cooper, A Bassett, P Liò, L Paavolainen, S Vakili, M Lotfollahi</p>
+          <div class="plinks"><a href="https://arxiv.org/abs/2601.11827">arXiv</a></div></div>
+      </li>
+      <li class="pub" data-t="p" data-scholar="8k81kl-MbHgC">
+        <div class="venue p">bioRxiv 2026</div>
+        <div><h3><a href="https://www.biorxiv.org/content/10.1101/2026.03.24.713961v1">Self-supervised learning for a gene program-centric view of cell states</a></h3>
+          <p class="authors">M Moullet, T Isobe, A Vahidi, C Leonardi, L Paulas-Condori, C Soelistyo, … <b>H Asadollahzadeh</b>, …</p>
+          <div class="plinks"><a href="https://www.biorxiv.org/content/10.1101/2026.03.24.713961v1">Paper</a></div></div>
+      </li>
+    </ul>
+
+    <div class="year">2025</div>
+    <ul class="pubs">
+      <li class="pub" data-t="w" data-scholar="IjCSPb-OGe4C 2osOgNQ5qMEC">
+        <div class="venue w">SCSL @ ICLR 2025</div>
+        <div><h3><a href="https://openreview.net/forum?id=8vo1YSAt6g">Exploiting What Trained Models Learn for Making Them Robust to Spurious Correlations without Group Annotations</a></h3>
+          <p class="authors">M Ghaznavi, <b>H Asadollahzadeh</b>, FH Noohdani, SV Tabar, H Hasani, T Akbari Alvanagh, MH Rohban, MS Baghshah</p>
+          <div class="plinks"><a href="https://openreview.net/forum?id=8vo1YSAt6g">OpenReview</a><a href="https://arxiv.org/abs/2410.05345">arXiv</a></div></div>
+      </li>
+      <li class="pub" data-t="w" data-scholar="ufrVoPGSRksC">
+        <div class="venue w">OPT @ NeurIPS 2025</div>
+        <div><h3><a href="https://openreview.net/forum?id=WWswE1WTLQ">On the Potential of the Four-Point Model for Studying the Role of Optimization in Robustness to Spurious Correlations</a></h3>
+          <p class="authors">M Ghaznavi, <b>H Asadollahzadeh</b></p>
+          <div class="plinks"><a href="https://openreview.net/forum?id=WWswE1WTLQ">OpenReview</a></div></div>
+      </li>
+      <li class="pub" data-t="p" data-scholar="YsMSGLbcyi4C">
+        <div class="venue p">bioRxiv 2025</div>
+        <div><h3><a href="https://www.biorxiv.org/content/10.1101/2025.06.03.657578v1">Integrating multi-covariate disentanglement with counterfactual analysis on synthetic data enables cell type discovery and counterfactual predictions</a></h3>
+          <p class="authors">S Megas, A Amani, A Rose, O Dufva, K Shamsaie, <b>H Asadollahzadeh</b>, K Polanski, M Haniffa, SA Teichmann, M Lotfollahi</p>
+          <div class="plinks"><a href="https://www.biorxiv.org/content/10.1101/2025.06.03.657578v1">Paper</a></div></div>
+      </li>
+      <li class="pub" data-t="p" data-scholar="UeHWp8X0CEIC">
+        <div class="venue p">OpenReview 2025</div>
+        <div><h3><a href="https://openreview.net/forum?id=PHESUVacAw">Sequence-to-sequence modeling for Temporal Reconstruction of Cellular Events</a></h3>
+          <p class="authors">A Vahidi, K Ly, <b>H Asadollahzadeh</b>, M Moullet, V Baskar, E Stephenson, M Lotfollahi</p>
+          <div class="plinks"><a href="https://openreview.net/forum?id=PHESUVacAw">OpenReview</a></div></div>
+      </li>
+    </ul>
+
+    <div class="year">2023</div>
+    <ul class="pubs">
+      <li class="pub" data-t="p" data-scholar="u5HHmVD_uO8C">
+        <div class="venue p">arXiv 2023</div>
+        <div><h3><a href="https://arxiv.org/abs/2312.04893">Annotation-Free Group Robustness via Loss-Based Resampling</a></h3>
+          <p class="authors">M Ghaznavi, <b>H Asadollahzadeh</b>, HRY Araghi, FH Noohdani, MH Rohban, MS Baghshah</p>
+          <div class="plinks"><a href="https://arxiv.org/abs/2312.04893">arXiv</a><a href="https://drive.google.com/file/d/13uqbZ5-Nab0YIBHVKV3MjkuG9MAUdYb9/view?usp=sharing">Poster</a></div></div>
+      </li>
+      <li class="pub" data-t="p" data-scholar="9yKSN-GCB0IC">
+        <div class="venue p">2023</div>
+        <div><h3>Disentangling Covariates to Predict Counterfactuals for Single-cell Data</h3>
+          <p class="authors">K Shamsaie, S Megas, <b>H Asadollahzadeh</b>, SA Teichmann, M Lotfollahi</p>
+          <div class="plinks"></div></div>
+      </li>
+    </ul>
+    <p class="note">Citation counts come from Google Scholar and refresh daily. Versions of the same paper (preprint and camera-ready) are counted together.</p>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time datetime="2026-05">May 2026</time><div><b>TRACER</b> accepted to <b>ICML 2026</b>. <a href="https://openreview.net/forum?id=XOYXLQRlj8">OpenReview</a> · <a href="https://arxiv.org/abs/2605.29380">arXiv</a> · <a href="https://github.com/HesamAsad/TRACER">Code</a></div></li>
+      <li><time datetime="2026-03">Mar 2026</time><div><b>Celcomen</b> published in <a href="https://www.nature.com/articles/s41467-026-69856-5">Nature Communications</a>.</div></li>
+      <li><time datetime="2026-03">Mar 2026</time><div><b>PerturbGen</b>, predicting how perturbations reshape cellular trajectories, is on <a href="https://www.biorxiv.org/content/10.64898/2026.03.04.709254v1">bioRxiv</a>.</div></li>
+      <li><time datetime="2026-01">Jan 2026</time><div>Three papers accepted to <b>ICLR 2026</b>: <a href="https://openreview.net/forum?id=f4TACE7HhU">GHOST</a>, <a href="https://openreview.net/forum?id=a15cDnzr6r">DirMoE</a> and <a href="https://openreview.net/forum?id=zCwTMRtASZ">Softmax is not Enough</a>.</div></li>
+      <li><time datetime="2025-09">Sep 2025</time><div><b>GHOST</b>, hallucination-inducing image generation for multimodal LLMs, is on <a href="https://arxiv.org/abs/2509.25178">arXiv</a>.</div></li>
+    </ul>
+    <details class="more">
+      <summary><span class="o">Show earlier news</span><span class="c">Show less</span></summary>
+      <ul class="news">
+        <li><time datetime="2025-06">Jun 2025</time><div>Multi-covariate disentanglement with counterfactual analysis on synthetic data is on <a href="https://www.biorxiv.org/content/10.1101/2025.06.03.657578v1">bioRxiv</a>.</div></li>
+        <li><time datetime="2025-03">Mar 2025</time><div>"Exploiting What Trained Models Learn…" published at the <a href="https://openreview.net/forum?id=8vo1YSAt6g">ICLR 2025 Workshop on Spurious Correlation and Shortcut Learning</a>.</div></li>
+        <li><time datetime="2025-02">Feb 2025</time><div>Started my PhD at <b>The University of Melbourne</b> in the ADM+S Centre of Excellence.</div></li>
+        <li><time datetime="2025-01">Jan 2025</time><div>Our proposal for the <b>Workshop on Spurious Correlation and Shortcut Learning: Foundations and Solutions</b> was accepted at ICLR 2025.</div></li>
+        <li><time datetime="2024-10">Oct 2024</time><div>"Trained Models Tell Us How to Make Them Robust to Spurious Correlation without Group Annotation" is on <a href="https://arxiv.org/abs/2410.05345">arXiv</a>.</div></li>
+        <li><time datetime="2023-12">Dec 2023</time><div>"Annotation-Free Group Robustness via Loss-Based Resampling" is on <a href="https://arxiv.org/abs/2312.04893">arXiv</a> (<a href="https://drive.google.com/file/d/13uqbZ5-Nab0YIBHVKV3MjkuG9MAUdYb9/view?usp=sharing">poster</a>).</div></li>
+        <li><time datetime="2023-09">Sep 2023</time><div>Two papers accepted to the <a href="http://www.ood-cv.org/">ICCV 2023 Workshop on OOD Generalization in Computer Vision</a>:
+          <ul>
+            <li><em>Data-Driven Annotation-Free Group Robustness Across Extremely Unbalanced Group Sizes</em>: <a href="https://github.com/eccv22-ood-workshop/eccv22-ood-workshop.github.io/blob/new/camera_ready/CameraReady%2059.pdf">paper</a>, <a href="https://drive.google.com/file/d/1SDtxY4S-AvE7ZSD9mQc4D9bkU2Q99cqD/view?usp=drive_link">slides</a></li>
+            <li><em>Evaluating Robustness of Pre-Trained Deep Neural Networks Against Spurious Correlations</em>: <a href="https://github.com/eccv22-ood-workshop/eccv22-ood-workshop.github.io/blob/new/camera_ready/CameraReady%2063.pdf">paper</a>, <a href="https://drive.google.com/file/d/1JLXGmltZZvZ5_tyWbZeb129s9rEW-pJr/view?usp=sharing">slides</a></li>
+          </ul></div></li>
+        <li><time datetime="2023-05">May 2023</time><div>Joined the <b>Machine Learning Lab</b> at Sharif University of Technology, working with <a href="https://scholar.google.com/citations?user=S1U0KlgAAAAJ&hl=en">Dr. Mahdieh Soleymani Baghshah</a> and <a href="https://scholar.google.com/citations?user=pRyJ6FkAAAAJ&hl=en">Dr. Mohammad Hossein Rohban</a>, with the Robust and Interpretable Machine Learning Lab (RIML).</div></li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching <span class="aside"><a href="teaching.html">All teaching</a></span></h2>
+    <div class="cards">
+      <a class="card" href="teaching.html#comp90086" style="color:inherit;text-decoration:none">
+        <div class="k">COMP90086 · 2026</div>
+        <h3>Computer Vision</h3>
+        <p>Eight interactive workshop pages, from arrays and filtering to ViTs, diffusion models and segmentation.</p>
+        <span class="go" style="color:var(--accent)">Workshop pages →</span>
+      </a>
+      <a class="card" href="teaching.html#comp90073" style="color:inherit;text-decoration:none">
+        <div class="k">COMP90073 · 2026</div>
+        <h3>Trustworthy Machine Learning</h3>
+        <p>Seven interactive workshop pages on privacy, anomaly and OOD detection, adversarial robustness and backdoors.</p>
+        <span class="go" style="color:var(--accent)">Workshop pages →</span>
+      </a>
+    </div>
+    <ul class="ta" aria-label="Earlier teaching assistantships">
+      <li><span>Deep Learning · Sharif University of Technology</span><span>2023</span></li>
+      <li><span>Intro to Machine Learning; Artificial Intelligence · Sharif University of Technology</span><span>2023</span></li>
+      <li><span>Neural Networks; Artificial Intelligence; Algorithms; Probability &amp; Statistics · University of Tehran</span><span>2022–23</span></li>
+    </ul>
+  </section>
+
+  <section id="talks">
+    <h2>Talks and projects</h2>
+    <div class="cards">
+      <a class="card" href="https://docs.google.com/presentation/d/e/2PACX-1vSgqFD-wpQyPaKwL2owPkrxnjTORlioX6KkUmnESu0eENsW4Fb0jNw-T3U-Rfdj5tMYOpkMhM4Gd9lW/pub" style="color:inherit;text-decoration:none">
+        <div class="k">TALK · MAY 2023</div>
+        <h3>Deep Generative Models: Pushing the Limits of Creativity</h3>
+        <p>Slides from my talk on deep generative models.</p>
+        <span class="go" style="color:var(--accent)">Slides →</span>
+      </a>
+      <a class="card" href="projects.html" style="color:inherit;text-decoration:none">
+        <div class="k">PROJECTS</div>
+        <h3>Course and research projects</h3>
+        <p>Transformers, BERT and BEiT; GANs and Wasserstein losses; and more, with code and reports.</p>
+        <span class="go" style="color:var(--accent)">All projects →</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Hesam Asadollahzadeh</span>
+    <span><a href="https://github.com/HesamAsad">GitHub</a> · <a href="https://scholar.google.com/citations?user=cL60wssAAAAJ&hl=en">Google Scholar</a> · <a href="mailto:asadollahzah@unimelb.edu.au">Email</a></span>
+  </div>
+</footer>
+
+<script>
+  // theme toggle: auto → opposite of the current look → back to auto
+  (() => {
+    const root = document.documentElement, btn = document.getElementById('theme');
+    btn.addEventListener('click', () => {
+      const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    });
+  })();
+
+  // publication filters
+  (() => {
+    const btns = document.querySelectorAll('.filters button');
+    btns.forEach(b => b.addEventListener('click', () => {
+      const f = b.dataset.f;
+      btns.forEach(x => x.setAttribute('aria-pressed', x === b));
+      document.querySelectorAll('.pub').forEach(p => { p.hidden = f !== 'all' && !p.dataset.t.split(' ').includes(f); });
+      document.querySelectorAll('#publications .year').forEach(y => { y.hidden = ![...y.nextElementSibling.children].some(p => !p.hidden); });
+    }));
+  })();
+
+  // live metrics and per-paper citations from data/scholar.json (refreshed daily by a GitHub Action)
+  fetch('data/scholar.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : Promise.reject()).then(S => {
+    const user = 'cL60wssAAAAJ';
+    document.getElementById('m-cit').textContent = S.citations;
+    document.getElementById('m-h').textContent = S.h_index;
+    document.getElementById('m-i10').textContent = S.i10_index;
+    document.getElementById('m-date').textContent = new Date(S.updated + 'T00:00:00').toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
+    document.getElementById('metrics').hidden = false;
+    document.querySelectorAll('.pub[data-scholar]').forEach(p => {
+      const ids = p.dataset.scholar.split(/\s+/), n = ids.reduce((s, id) => s + ((S.papers[user + ':' + id] || {}).cites || 0), 0);
+      if (!n) return;
+      const span = document.createElement('span'); span.className = 'cites';
+      span.innerHTML = `<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=${user}&citation_for_view=${user}:${ids[0]}"><i class="fa-solid fa-quote-right"></i> ${n} citation${n === 1 ? '' : 's'}</a>`;
+      p.querySelector('.plinks').appendChild(span);
+    });
+  }).catch(() => {});
+
+  // highlight the section in view
+  (() => {
+    const links = [...document.querySelectorAll('.nav a[href^="#"]')], secs = links.map(a => document.querySelector(a.getAttribute('href')));
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-40% 0px -55% 0px' });
+    secs.forEach(s => s && io.observe(s));
+  })();
+</script>
+</body>
 </html>
