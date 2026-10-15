@@ -74,9 +74,10 @@ h2 .aside { font: 400 .85rem/1 var(--sans); color: var(--faint); margin-left: au
 
 /* news */
 .news { list-style: none; margin: 0; padding: 0; }
-.news li { display: grid; grid-template-columns: 5.2rem 1fr; gap: 1rem; padding: .55rem 0; font-size: .94rem; }
+.news > li { display: grid; grid-template-columns: 5.2rem 1fr; gap: 1rem; padding: .55rem 0; font-size: .94rem; }
 .news time { font: 500 .8rem/1.9 var(--sans); color: var(--faint); font-variant-numeric: tabular-nums; }
 .news ul { margin: .4rem 0 0; padding-left: 1.1rem; font-size: .88rem; color: var(--muted); }
+.news ul li { margin: .25rem 0; }
 details.more > summary { list-style: none; cursor: pointer; display: inline-block; margin-top: .6rem; font-size: .85rem; color: var(--accent); }
 details.more > summary::-webkit-details-marker { display: none; }
 details.more[open] > summary .o { display: none; } details.more:not([open]) > summary .c { display: none; }
@@ -99,7 +100,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-conten
   .hero { grid-template-columns: 1fr; gap: 1.2rem; padding-top: 2.2rem; }
   .hero img { width: 112px; height: 112px; }
   .hero h1 { font-size: 2rem; }
-  .pub, .news li { grid-template-columns: 1fr; gap: .2rem; }
+  .pub, .news > li { grid-template-columns: 1fr; gap: .2rem; }
   .cards { grid-template-columns: 1fr; }
   .nav { gap: .9rem; }
   .brand { display: none; }
