@@ -28,122 +28,14 @@
   // apply the saved theme before first paint
   try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
-<style>
-  :root {
-    --bg: #fbfaf8; --surface: #ffffff; --ink: #1c1d21; --muted: #62646c; --faint: #9a9ca3; --rule: #e7e4df;
-    --accent: #3b4fd8; --accent-soft: #eceffd; --gold: #a86b12;
-    --serif: 'Newsreader', Georgia, serif; --sans: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --bg: #121316; --surface: #1a1b1f; --ink: #ecebe7; --muted: #a3a4aa; --faint: #74767d; --rule: #2a2b31; --accent: #8c9bff; --accent-soft: #23264a; --gold: #e0a84f; }
-  }
-  :root[data-theme="dark"] { --bg: #121316; --surface: #1a1b1f; --ink: #ecebe7; --muted: #a3a4aa; --faint: #74767d; --rule: #2a2b31; --accent: #8c9bff; --accent-soft: #23264a; --gold: #e0a84f; }
-
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; text-underline-offset: 3px; }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
-
-  /* top bar */
-  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
-  .top .wrap { display: flex; align-items: center; gap: 1.25rem; height: 3.6rem; }
-  .brand { font: 500 1.15rem/1 var(--serif); color: var(--ink); white-space: nowrap; }
-  .brand:hover { text-decoration: none; }
-  .nav { display: flex; gap: 1.1rem; margin-left: auto; font-size: .9rem; overflow-x: auto; scrollbar-width: none; }
-  .nav::-webkit-scrollbar { display: none; }
-  .nav a { color: var(--muted); white-space: nowrap; }
-  .nav a:hover, .nav a.on { color: var(--ink); text-decoration: none; }
-  .theme { border: 1px solid var(--rule); background: var(--surface); color: var(--muted); width: 2rem; height: 2rem; border-radius: 50%; cursor: pointer; flex: none; }
-  .theme:hover { color: var(--ink); }
-
-  /* hero */
-  .hero { display: grid; grid-template-columns: 148px 1fr; gap: 2rem; align-items: start; padding: 3.5rem 0 2.5rem; }
-  .hero img { width: 148px; height: 148px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
-  .hero h1 { font: 500 2.4rem/1.1 var(--serif); margin: .2rem 0 .4rem; letter-spacing: -.01em; }
-  .role { color: var(--muted); margin: 0 0 1rem; }
-  .role b { color: var(--ink); font-weight: 500; }
-  .links { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.1rem; }
-  .links a { display: inline-flex; align-items: center; gap: .45rem; padding: .32rem .75rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); color: var(--ink); font-size: .85rem; }
-  .links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-  .metrics { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1.4rem; font-size: .88rem; color: var(--muted); }
-  .metrics b { font: 500 1.35rem/1 var(--serif); color: var(--ink); margin-right: .3rem; }
-  .metrics .src { font-size: .78rem; color: var(--faint); }
-  .metrics[hidden] { display: none; }
-
-  .bio { font-size: 1.04rem; color: var(--ink); }
-  .bio p { margin: 0 0 1rem; }
-  .interests { display: flex; flex-wrap: wrap; gap: .4rem; margin: .4rem 0 0; padding: 0; list-style: none; }
-  .interests li { font-size: .8rem; color: var(--muted); background: var(--accent-soft); color: var(--accent); padding: .18rem .6rem; border-radius: 999px; }
-
-  section { padding: 2.6rem 0 .5rem; }
-  h2 { font: 500 1.6rem/1.2 var(--serif); margin: 0 0 1.1rem; display: flex; align-items: baseline; gap: .8rem; }
-  h2 .aside { font: 400 .85rem/1 var(--sans); color: var(--faint); margin-left: auto; }
-
-  /* publications */
-  .filters { display: flex; flex-wrap: wrap; gap: .4rem; margin: -.2rem 0 1.2rem; }
-  .filters button { font: 500 .8rem var(--sans); color: var(--muted); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: .28rem .8rem; cursor: pointer; }
-  .filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-  .year { font: 500 .8rem var(--sans); color: var(--faint); letter-spacing: .08em; margin: 1.4rem 0 .4rem; }
-  .year:first-of-type { margin-top: 0; }
-  .pubs { list-style: none; margin: 0; padding: 0; }
-  .pub { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: .85rem 0; border-top: 1px solid var(--rule); }
-  .pub[hidden] { display: none; }
-  .venue { font-size: .76rem; font-weight: 600; color: var(--accent); line-height: 1.35; padding-top: .2rem; }
-  .venue.j { color: var(--gold); }
-  .venue.p, .venue.w { color: var(--muted); }
-  .pub h3 { font: 500 1.06rem/1.35 var(--serif); margin: 0 0 .2rem; }
-  .pub h3 a { color: var(--ink); }
-  .authors { font-size: .86rem; color: var(--muted); margin: 0 0 .35rem; }
-  .authors b { color: var(--ink); font-weight: 600; }
-  .plinks { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .9rem; font-size: .82rem; }
-  .plinks .cites { color: var(--faint); }
-  .plinks .cites a { color: var(--faint); }
-  .plinks .cites a:hover { color: var(--accent); }
-  .note { font-size: .82rem; color: var(--faint); margin-top: 1rem; }
-
-  /* news */
-  .news { list-style: none; margin: 0; padding: 0; }
-  .news li { display: grid; grid-template-columns: 5.2rem 1fr; gap: 1rem; padding: .55rem 0; font-size: .94rem; }
-  .news time { font: 500 .8rem/1.9 var(--sans); color: var(--faint); font-variant-numeric: tabular-nums; }
-  .news ul { margin: .4rem 0 0; padding-left: 1.1rem; font-size: .88rem; color: var(--muted); }
-  details.more > summary { list-style: none; cursor: pointer; display: inline-block; margin-top: .6rem; font-size: .85rem; color: var(--accent); }
-  details.more > summary::-webkit-details-marker { display: none; }
-  details.more[open] > summary .o { display: none; } details.more:not([open]) > summary .c { display: none; }
-
-  /* cards */
-  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-  .card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 1.1rem 1.2rem; display: flex; flex-direction: column; }
-  .card h3 { font: 500 1.08rem/1.3 var(--serif); margin: 0 0 .3rem; }
-  .card p { font-size: .88rem; color: var(--muted); margin: 0 0 .7rem; flex: 1; }
-  .card .k { font-size: .74rem; font-weight: 600; letter-spacing: .06em; color: var(--faint); margin-bottom: .35rem; }
-  .card .go { font-size: .86rem; font-weight: 500; }
-  .ta { list-style: none; margin: 1rem 0 0; padding: 0; font-size: .9rem; color: var(--muted); }
-  .ta li { padding: .3rem 0; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 1rem; }
-  .ta li span:last-child { color: var(--faint); white-space: nowrap; }
-
-  footer { margin: 3.5rem 0 0; padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--rule); font-size: .82rem; color: var(--faint); }
-  footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; }
-
-  @media (max-width: 640px) {
-    .hero { grid-template-columns: 1fr; gap: 1.2rem; padding-top: 2.2rem; }
-    .hero img { width: 112px; height: 112px; }
-    .hero h1 { font-size: 2rem; }
-    .pub, .news li { grid-template-columns: 1fr; gap: .2rem; }
-    .cards { grid-template-columns: 1fr; }
-    .nav { gap: .9rem; }
-    .brand { display: none; }
-  }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-</style>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#">Hesam Asadollahzadeh</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#about">About</a><a href="#publications">Publications</a><a href="#news">News</a><a href="#teaching">Teaching</a><a href="projects.html">Projects</a>
+      <a href="#about">About</a><a href="#publications">Publications</a><a href="#news">News</a><a href="teaching.html">Teaching</a><a href="projects.html">Projects</a>
     </nav>
     <button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
   </div>
@@ -189,6 +81,12 @@
 
     <div class="year">2026</div>
     <ul class="pubs">
+      <li class="pub" data-t="c" data-scholar="KlAtU1dfN6UC">
+        <div class="venue">NeurIPS 2026</div>
+        <div><h3><a href="https://arxiv.org/abs/2610.09841">ORCA: Hunting Compositional Failures in Text-to-Image Diffusion</a></h3>
+          <p class="authors">A Hemmat, A Vahidi, A Shidani, MV Sanian, <b>H Asadollahzadeh</b>, AY Parast, M Lotfollahi</p>
+          <div class="plinks"><a href="https://arxiv.org/abs/2610.09841">arXiv</a></div></div>
+      </li>
       <li class="pub" data-t="c" data-scholar="MXK_kJrjxJIC">
         <div class="venue">ICML 2026</div>
         <div><h3><a href="https://openreview.net/forum?id=XOYXLQRlj8">TRACER: Persistent Regularization for Robust Multimodal Finetuning</a></h3>
@@ -282,12 +180,13 @@
           <div class="plinks"></div></div>
       </li>
     </ul>
-    <p class="note">Citation counts come from Google Scholar and refresh daily. Versions of the same paper (preprint and camera-ready) are counted together.</p>
+    <p class="note">Citation counts come from Google Scholar, as of the date shown at the top. Versions of the same paper (preprint and camera-ready) are counted together.</p>
   </section>
 
   <section id="news">
     <h2>News</h2>
     <ul class="news">
+      <li><time datetime="2026-10">Oct 2026</time><div><b>ORCA</b>, hunting compositional failures in text-to-image diffusion, accepted to <b>NeurIPS 2026</b>. <a href="https://arxiv.org/abs/2610.09841">arXiv</a></div></li>
       <li><time datetime="2026-05">May 2026</time><div><b>TRACER</b> accepted to <b>ICML 2026</b>. <a href="https://openreview.net/forum?id=XOYXLQRlj8">OpenReview</a> · <a href="https://arxiv.org/abs/2605.29380">arXiv</a> · <a href="https://github.com/HesamAsad/TRACER">Code</a></div></li>
       <li><time datetime="2026-03">Mar 2026</time><div><b>Celcomen</b> published in <a href="https://www.nature.com/articles/s41467-026-69856-5">Nature Communications</a>.</div></li>
       <li><time datetime="2026-03">Mar 2026</time><div><b>PerturbGen</b>, predicting how perturbations reshape cellular trajectories, is on <a href="https://www.biorxiv.org/content/10.64898/2026.03.04.709254v1">bioRxiv</a>.</div></li>

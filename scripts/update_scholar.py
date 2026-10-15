@@ -1,6 +1,7 @@
 """Refresh data/scholar.json from the public Google Scholar profile.
 
-Run daily by .github/workflows/scholar.yml. If Scholar refuses the request or the
+Run weekly by .github/workflows/scholar.yml (Scholar often blocks GitHub runners), or locally:
+    python3 scripts/update_scholar.py && git commit -am "Refresh Google Scholar data" && git push If Scholar refuses the request or the
 page layout changes, the script exits without touching the existing file, so the
 site keeps showing the last good numbers.
 """

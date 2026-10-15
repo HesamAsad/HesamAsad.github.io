@@ -1,635 +1,99 @@
 <!doctype html>
-<html lang="en" class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <!-- begin SEO -->
-        <title>Projects - Hesam Asadollahzadeh</title>
-        <meta property="og:locale" content="en-US">
-        <meta property="og:site_name" content="Hesam Asadollahzadeh">
-        <meta property="og:title" content="My Projects">
-        <link rel="canonical" href="http://HesamAsad.github.io">
-        <meta property="og:url" content="http://HesamAsad.github.io">
-        <meta property="og:description" content="My projects">
-        <meta name="twitter:title" content="Projects">
-        <meta name="twitter:description" content="My projects">
-        <meta name="twitter:url" content="http://HesamAsad.github.io">
-        <meta name="twitter:card" content="summary">
-        <script type="application/ld+json">
-             { 
-                "@context" : "http://schema.org", 
-                "@type" : "Person", 
-                "name" : "Hesam Asadollahzadeh", 
-                "url" : "http://HesamAsad.github.io", 
-                "sameAs" : null 
-            } 
-        </script>
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-        </script>
-        <link rel="stylesheet" href="assets/css/main.css">
-        <meta http-equiv="cleartype" content="on">
-        <meta name="msapplication-TileColor" content="#000000">
-        <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="assets/css/academicons.css"/>
-        <script type="text/x-mathjax-config">
-             MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); 
-        </script>
-        <script type="text/x-mathjax-config">
-             MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } }); 
-        </script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet' type='text/css'>
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-        <link rel="manifest" href="images/site.webmanifest">
-        
-        <style>
-            :root {
-                --primary-color: #4f46e5;
-                --secondary-color: #3730a3;
-                --accent-color: #6366f1;
-                --text-color: #374151;
-                --text-light: #9ca3af;
-                --bg-light: #fafafa;
-                --border-color: #f3f4f6;
-                --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-                --shadow-lg: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
-            }
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · Hesam Asadollahzadeh</title>
+<meta name="description" content="Projects by Hesam Asadollahzadeh: implementations of Transformers, GANs, CNNs and recurrent networks.">
+<meta property="og:title" content="Projects · Hesam Asadollahzadeh">
+<meta property="og:description" content="Projects by Hesam Asadollahzadeh: implementations of Transformers, GANs, CNNs and recurrent networks.">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>
+  try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Hesam Asadollahzadeh</a>
+    <nav class="nav" aria-label="Site"><a href="index.html#about">About</a><a href="index.html#publications">Publications</a><a href="index.html#news">News</a><a href="teaching.html">Teaching</a><a href="projects.html" class="on" aria-current="page">Projects</a></nav>
+    <button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
+  </div>
+</header>
 
-            * {
-                box-sizing: border-box;
-            }
-
-            body {
-                font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                line-height: 1.6;
-                color: var(--text-color);
-                font-weight: 400;
-                letter-spacing: -0.01em;
-            }
-
-            /* Animations */
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            @keyframes fadeInLeft {
-                from {
-                    opacity: 0;
-                    transform: translateX(-30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-
-            .animate-fade-in-up {
-                animation: fadeInUp 0.8s ease-out forwards;
-            }
-
-            .animate-fade-in-left {
-                animation: fadeInLeft 0.8s ease-out forwards;
-            }
-
-            /* Enhanced Author Section */
-            .author__avatar img {
-                border-radius: 50%;
-                border: 4px solid var(--primary-color);
-                transition: all 0.3s ease;
-                box-shadow: var(--shadow);
-            }
-
-            .author__avatar:hover img {
-                transform: scale(1.05);
-                box-shadow: var(--shadow-lg);
-            }
-
-            .author__name {
-                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                font-weight: 700;
-                font-size: 1.5rem;
-            }
-
-            .author__bio {
-                color: var(--text-light);
-                font-weight: 500;
-                font-size: 1.1rem;
-            }
-
-            /* Enhanced Social Links */
-            .author__urls a {
-                transition: all 0.3s ease;
-                border-radius: 8px;
-                padding: 0.4rem;
-                margin: 0.1rem 0;
-                display: flex;
-                align-items: center;
-            }
-
-            .author__urls a:hover {
-                background: var(--bg-light);
-                transform: translateX(5px);
-                color: var(--primary-color);
-            }
-
-            .author__urls p {
-                margin: 0.5rem 0;
-                padding: 0.4rem;
-                line-height: 1.3;
-                font-size: 0.9rem;
-            }
-
-            .author__content {
-                margin-bottom: 0.5rem;
-            }
-
-            .author__urls-wrapper {
-                margin-top: 0.5rem;
-            }
-
-            /* Enhanced Navigation */
-            .masthead {
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(10px);
-                border-bottom: 1px solid var(--border-color);
-                position: sticky;
-                top: 0;
-                z-index: 1000;
-            }
-
-            .masthead__menu-item a {
-                transition: all 0.3s ease;
-                border-radius: 6px;
-                padding: 0.5rem 1rem;
-            }
-
-            .masthead__menu-item a:hover {
-                background: var(--primary-color);
-                color: white;
-                transform: translateY(-2px);
-            }
-
-            /* Enhanced Page Title */
-            .page__title {
-                color: var(--primary-color);
-                font-weight: 600;
-                font-size: 2.5rem;
-                margin-bottom: 2rem;
-                position: relative;
-                padding-bottom: 0.5rem;
-            }
-
-            .page__title::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 80px;
-                height: 4px;
-                background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-                border-radius: 2px;
-            }
-
-            /* Minimalist Project Cards */
-            .list__item {
-                background: white;
-                border-radius: 4px;
-                padding: 1.25rem;
-                margin-bottom: 1rem;
-                box-shadow: var(--shadow);
-                transition: all 0.2s ease;
-                border: 1px solid var(--border-color);
-            }
-
-            .list__item:hover {
-                transform: translateY(-1px);
-                box-shadow: var(--shadow-lg);
-            }
-
-            .dashed-line {
-                border-top: none;
-                padding-top: 0;
-            }
-
-            .archive__item-title {
-                color: var(--text-color);
-                font-weight: 600;
-                font-size: 1.2rem;
-                margin-bottom: 0.75rem;
-                line-height: 1.4;
-                letter-spacing: -0.02em;
-            }
-
-            .archive__item-excerpt {
-                color: var(--text-light);
-                line-height: 1.6;
-                margin-bottom: 1rem;
-                font-size: 0.95rem;
-            }
-
-            .archive__item-teaser_single_cv {
-                display: flex;
-                gap: 1.5rem;
-                align-items: flex-start;
-            }
-
-            .box img {
-                border-radius: 4px;
-                box-shadow: var(--shadow);
-                transition: all 0.2s ease;
-                max-width: 150px;
-                height: auto;
-            }
-
-            .box img:hover {
-                transform: scale(1.02);
-                box-shadow: var(--shadow-lg);
-            }
-
-            .text {
-                flex: 1;
-            }
-
-            /* Minimalist Links */
-            .main_color {
-                background: var(--bg-light);
-                color: var(--primary-color);
-                padding: 0.4rem 0.8rem;
-                border-radius: 4px;
-                text-decoration: none;
-                margin-right: 0.4rem;
-                margin-bottom: 0.4rem;
-                font-size: 0.85rem;
-                border: 1px solid var(--border-color);
-                transition: all 0.2s ease;
-                display: inline-flex;
-                align-items: center;
-                gap: 0.4rem;
-            }
-
-            .main_color:hover {
-                background: var(--primary-color);
-                color: white;
-                border-color: var(--primary-color);
-                text-decoration: none;
-            }
-
-            /* Loading animation for elements */
-            .fade-in {
-                opacity: 0;
-                animation: fadeInUp 0.8s ease-out forwards;
-            }
-
-            .fade-in:nth-child(1) { animation-delay: 0.1s; }
-            .fade-in:nth-child(2) { animation-delay: 0.2s; }
-            .fade-in:nth-child(3) { animation-delay: 0.3s; }
-            .fade-in:nth-child(4) { animation-delay: 0.4s; }
-            .fade-in:nth-child(5) { animation-delay: 0.5s; }
-
-            /* Enhanced footer */
-            .page__footer {
-                background: var(--bg-light);
-                border-top: 1px solid var(--border-color);
-                margin-top: 4rem;
-            }
-
-            /* Responsive Design */
-            @media (max-width: 768px) {
-                .archive__item-teaser_single_cv {
-                    flex-direction: column;
-                    text-align: center;
-                }
-                
-                .box img {
-                    max-width: 200px;
-                    margin: 0 auto;
-                }
-            }
-
-            /* Code and Tech Elements */
-            code, .code, .tech-term {
-                font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
-                font-size: 0.9em;
-                background: var(--bg-light);
-                padding: 0.2em 0.4em;
-                border-radius: 3px;
-                border: 1px solid var(--border-color);
-                font-weight: 400;
-            }
-
-            /* Enhanced Typography */
-            h1, h2, h3, h4, h5, h6 {
-                font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-                letter-spacing: -0.02em;
-            }
-
-            /* Smooth scrolling */
-            html {
-                scroll-behavior: smooth;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="masthead">
-            <div class="masthead__inner-wrap">
-                <div class="masthead__menu">
-                    <nav id="site-nav" class="greedy-nav">
-                        <button>
-                            <div class="navicon"></div>
-                        </button>
-                        <ul class="visible-links">
-                            <li class="masthead__menu-item masthead__menu-item--lg">
-                                <a href="http://HesamAsad.github.io">Hesam Asadollahzadeh</a>
-                            </li>
-                            <li class="masthead__menu-item">
-                                <a href="http://HesamAsad.github.io/teaching">Teaching</a>
-                            </li>
-                            <li class="masthead__menu-item">
-                                <a href="http://HesamAsad.github.io/projects">Projects</a>
-                            </li>
-                        </ul>
-                        <ul class="hidden-links hidden"></ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div id="main" role="main">
-            <div class="sidebar sticky">
-                <div itemscope itemtype="http://schema.org/Person" class="animate-fade-in-left">
-                    <div class="author__avatar">
-                        <img src="images/profile.jpg" class="author__avatar" alt="Hesam Asadollahzadeh">
-                    </div>
-                    <div class="author__content">
-                        <h3 class="author__name">Hesam Asadollahzadeh</h3>
-                        <p class="author__bio">Ph.D. Student</p>
-                    </div>
-                    <div class="author__urls-wrapper">
-                        <button class="btn btn--inverse">Follow</button>
-                        <ul class="author__urls social-icons">
-                            <p>
-                                <i class="fa fa-fw fa-university" aria-hidden="true"></i>
-                                The University of Melbourne<br>
-                                ADM+S Centre of Excellence
-                            </p>
-                            <li>
-                                <a href="mailto:asadollahzah@unimelb.edu.au">
-                                    <i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
-                                    Email
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://scholar.google.com/citations?user=cL60wssAAAAJ&hl=en">
-                                    <i class="fas fa-fw fa-graduation-cap"></i>
-                                    Google Scholar
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/HesamAsad">
-                                    <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-                                    Github
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/hesamasadzadeh">
-                                    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
-                                    LinkedIn
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/HesamAsdz">
-                                    <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i>
-                                    X (Twitter)
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="archive">
-                <h1 class="page__title animate-fade-in-up">Projects</h1>
-                
-                <div class="list__item fade-in">
-                    <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-                        <div class="archive__item-teaser_single_cv">
-                            <div class="box">
-                                <img src="images/CA5.png" alt="BERT and Transformers"/>
-                            </div>
-                            <div class="text">
-                                <h3 class="archive__item-title" itemprop="headline">
-                                    Transformers, BERT, and BEIT
-                                </h3>
-                                <p class="archive__item-excerpt" itemprop="description">
-                                    BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,<br/>
-                                    BEIT: BERT Pre-Training of Image Transformers,<br/>
-                                    Neural Networks & Deep Learning,<br/>
-                                    Dr. Ahmad Kalhor,<br/>
-                                    Autumn 2022
-                                </p>
-                                <div class="section-3 w-100">
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA5/" target="_blank">
-                                        <i class="fab fa-fw fa-github" aria-hidden="true"></i>Github
-                                    </a>
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA5/blob/main/HW5-Report.pdf" target="_blank">
-                                        <i class="fas fa-file-pdf"></i>Report (Persian)
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="list__item fade-in">
-                    <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-                        <div class="archive__item-teaser_single_cv">
-                            <div class="box">
-                                <img src="images/CA6.png" alt="GANs"/>
-                            </div>
-                            <div class="text">
-                                <h3 class="archive__item-title" itemprop="headline">
-                                    Generative Adversarial Networks (DCGAN, AC-GAN, Wasserstein Loss, and WGAN)
-                                </h3>
-                                <p class="archive__item-excerpt" itemprop="description">
-                                    Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks, <br/>
-                                    Conditional Image Synthesis With Auxiliary Classifier GANs,<br/>
-                                    Wasserstein GAN (WGANs) (Arjovsky et al. 2017),<br/>
-                                    Neural Networks & Deep Learning,<br/>
-                                    Dr. Ahmad Kalhor,<br/>
-                                    Autumn 2022
-                                </p>
-                                <div class="section-3 w-100">
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA6/" target="_blank">
-                                        <i class="fab fa-fw fa-github" aria-hidden="true"></i>Github
-                                    </a>
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA6/blob/main/HW6-Report.pdf" target="_blank">
-                                        <i class="fas fa-file-pdf"></i>Report (Persian)
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="list__item fade-in">
-                    <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-                        <div class="archive__item-teaser_single_cv">
-                            <div class="box">
-                                <img src="images/CA3.jpg" alt="Transfer Learning and YOLO"/>
-                            </div>
-                            <div class="text">
-                                <h3 class="archive__item-title" itemprop="headline">
-                                    Transfer Learning & YOLOv6
-                                </h3>
-                                <p class="archive__item-excerpt" itemprop="description">
-                                    Skin Cancer Classification Model Based on VGG19 and Transfer Learning,<br/>
-                                    Single-stage Object Detection with YOLOv6 on Chess Dataset,<br/>
-                                    Neural Networks & Deep Learning,<br/>
-                                    Dr. Ahmad Kalhor,<br/>
-                                    Autumn 2022
-                                </p>
-                                <div class="section-3 w-100">
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA3/" target="_blank">
-                                        <i class="fab fa-fw fa-github" aria-hidden="true"></i>Github
-                                    </a>
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA3/blob/main/HW3-Report.pdf" target="_blank">
-                                        <i class="fas fa-file-pdf"></i>Report (Persian)
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="list__item fade-in">
-                    <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-                        <div class="archive__item-teaser_single_cv">
-                            <div class="box">
-                                <img src="images/CA4.jpg" alt="RNN and LSTM"/>
-                            </div>
-                            <div class="text">
-                                <h3 class="archive__item-title" itemprop="headline">
-                                    RNN, LSTM, GRU, CNN-LSTM
-                                </h3>
-                                <p class="archive__item-excerpt" itemprop="description">
-                                    Air‑pollution prediction in smart city, deep learning approach,<br/>
-                                    Fake news detection: A hybrid CNN-RNN based deep learning approach,<br/>
-                                    Neural Networks & Deep Learning,<br/>
-                                    Dr. Ahmad Kalhor,<br/>
-                                    Autumn 2022<br/>
-                                </p>
-                                <div class="section-3 w-100">
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA4/" target="_blank">
-                                        <i class="fab fa-fw fa-github" aria-hidden="true"></i>Github
-                                    </a>
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA4/blob/main/HW4-Report.pdf" target="_blank">
-                                        <i class="fas fa-file-pdf"></i>Report (Persian)
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="list__item fade-in">
-                    <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-                        <div class="archive__item-teaser_single_cv">
-                            <div class="box">
-                                <img src="images/CA2.png" alt="CNNs"/>
-                            </div>
-                            <div class="text">
-                                <h3 class="archive__item-title" itemprop="headline">
-                                    Convolutional Neural Networks (CNNs)
-                                </h3>
-                                <p class="archive__item-excerpt" itemprop="description">
-                                    Effects of Varying Resolution on Performance of CNN based Image Classification,<br/>
-                                    CNN Model for Image Classification on MNIST and Fashion-MNIST Dataset,<br/>
-                                    Neural Networks & Deep Learning,<br/>
-                                    Dr. Ahmad Kalhor,<br/>
-                                    Autumn 2022
-                                </p>
-                                <div class="section-3 w-100">
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA2/" target="_blank">
-                                        <i class="fab fa-fw fa-github" aria-hidden="true"></i>Github
-                                    </a>
-                                    <a class="main_color rounded" href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA2/blob/main/NNDL-HW2.pdf" target="_blank">
-                                        <i class="fas fa-file-pdf"></i>Report (Persian)
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-        <div class="page__footer">
-            <footer>
-                <div class="page__footer-follow">
-                    <ul class="social-icons">
-                        <li>
-                            <strong>Follow:</strong>
-                        </li>
-                        <li>
-                            <a href="http://github.com/HesamAsad">
-                                <i class="fab fa-github" aria-hidden="true"></i>
-                                GitHub
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="page__footer-copyright">
-                    &copy;2024 Hesam Asadollahzadeh. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>
-                    &amp;<a href="https://github.com/academicpages/academicpages.github.io"> AcademicPages</a>, 
-                    a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
-                </div>
-            </footer>
-        </div>
-        <script>
-            // Add smooth animations on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all fade-in elements
-            document.querySelectorAll('.fade-in').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(el);
-            });
-
-            // Add typing effect to the main title
-            document.addEventListener('DOMContentLoaded', function() {
-                const title = document.querySelector('.page__title');
-                if (title) {
-                    title.style.opacity = '1';
-                }
-            });
-        </script>
-    </body>
+<main class="wrap">
+  <h1 class="page-title">Projects</h1>
+  <p class="page-lede">Implementations from the Neural Networks &amp; Deep Learning course at the University of Tehran, each with code and a report. Research code lives with the papers on the <a href="index.html#publications">home page</a> and on <a href="https://github.com/HesamAsad">GitHub</a>.</p>
+  <section style="padding-top:1rem">
+    <div class="media">
+      <img src="images/CA5.png" alt="Transformers, BERT and BEiT" loading="lazy">
+      <div>
+        <div class="k">NEURAL NETWORKS &amp; DEEP LEARNING · DR. AHMAD KALHOR · AUTUMN 2022</div>
+        <h3>Transformers, BERT and BEiT</h3>
+        <ul><li>BERT: pre-training of deep bidirectional Transformers for language understanding</li><li>BEiT: BERT pre-training of image Transformers</li></ul>
+        <div class="plinks"><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA5/"><i class="fa-brands fa-github"></i>Code</a><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA5/blob/main/HW5-Report.pdf"><i class="fa-solid fa-file-pdf"></i>Report (Persian)</a></div>
+      </div>
+    </div>
+    <div class="media">
+      <img src="images/CA6.png" alt="Generative adversarial networks: DCGAN, AC-GAN and WGAN" loading="lazy">
+      <div>
+        <div class="k">NEURAL NETWORKS &amp; DEEP LEARNING · DR. AHMAD KALHOR · AUTUMN 2022</div>
+        <h3>Generative adversarial networks: DCGAN, AC-GAN and WGAN</h3>
+        <ul><li>Unsupervised representation learning with deep convolutional GANs</li><li>Conditional image synthesis with auxiliary classifier GANs</li><li>Wasserstein GAN (Arjovsky et al., 2017)</li></ul>
+        <div class="plinks"><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA6/"><i class="fa-brands fa-github"></i>Code</a><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA6/blob/main/HW6-Report.pdf"><i class="fa-solid fa-file-pdf"></i>Report (Persian)</a></div>
+      </div>
+    </div>
+    <div class="media">
+      <img src="images/CA3.jpg" alt="Transfer learning and YOLOv6" loading="lazy">
+      <div>
+        <div class="k">NEURAL NETWORKS &amp; DEEP LEARNING · DR. AHMAD KALHOR · AUTUMN 2022</div>
+        <h3>Transfer learning and YOLOv6</h3>
+        <ul><li>Skin-cancer classification with VGG19 and transfer learning</li><li>Single-stage object detection with YOLOv6 on a chess dataset</li></ul>
+        <div class="plinks"><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA3/"><i class="fa-brands fa-github"></i>Code</a><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA3/blob/main/HW3-Report.pdf"><i class="fa-solid fa-file-pdf"></i>Report (Persian)</a></div>
+      </div>
+    </div>
+    <div class="media">
+      <img src="images/CA4.jpg" alt="RNN, LSTM, GRU and CNN-LSTM" loading="lazy">
+      <div>
+        <div class="k">NEURAL NETWORKS &amp; DEEP LEARNING · DR. AHMAD KALHOR · AUTUMN 2022</div>
+        <h3>RNN, LSTM, GRU and CNN-LSTM</h3>
+        <ul><li>Air-pollution prediction in a smart city</li><li>Fake-news detection with a hybrid CNN-RNN</li></ul>
+        <div class="plinks"><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA4/"><i class="fa-brands fa-github"></i>Code</a><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA4/blob/main/HW4-Report.pdf"><i class="fa-solid fa-file-pdf"></i>Report (Persian)</a></div>
+      </div>
+    </div>
+    <div class="media">
+      <img src="images/CA2.png" alt="Convolutional neural networks" loading="lazy">
+      <div>
+        <div class="k">NEURAL NETWORKS &amp; DEEP LEARNING · DR. AHMAD KALHOR · AUTUMN 2022</div>
+        <h3>Convolutional neural networks</h3>
+        <ul><li>Effects of varying resolution on CNN image classification</li><li>CNN image classification on MNIST and Fashion-MNIST</li></ul>
+        <div class="plinks"><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA2/"><i class="fa-brands fa-github"></i>Code</a><a href="https://github.com/HesamAsad/NeuralNetworksDeepLearning-Fall2022-CA2/blob/main/NNDL-HW2.pdf"><i class="fa-solid fa-file-pdf"></i>Report (Persian)</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Hesam Asadollahzadeh</span>
+    <span><a href="https://github.com/HesamAsad">GitHub</a> · <a href="https://scholar.google.com/citations?user=cL60wssAAAAJ&hl=en">Google Scholar</a> · <a href="mailto:asadollahzah@unimelb.edu.au">Email</a></span>
+  </div>
+</footer>
+<script>
+  (() => {
+    const root = document.documentElement, btn = document.getElementById('theme');
+    btn.addEventListener('click', () => {
+      const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    });
+  })();
+</script>
+</body>
 </html>
