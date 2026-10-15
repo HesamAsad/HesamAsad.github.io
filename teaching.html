@@ -385,6 +385,29 @@
                 border-top: none;
                 padding-top: 0;
             }
+
+            /* Workshop gallery */
+            .course-jump { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem; }
+            .course-jump a { color: var(--primary-color); text-decoration: none; }
+            .archive__item.course:hover { transform: none; }
+            .ws-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+            .ws-card { display: flex; flex-direction: column; border: 1px solid #e5e7eb; border-radius: 6px; overflow: hidden; background: white; transition: box-shadow 0.2s ease, transform 0.2s ease; min-width: 0; }
+            .ws-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+            .ws-thumb { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: #111827; border-bottom: 1px solid #e5e7eb; }
+            .ws-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; transition: transform 0.3s ease; }
+            .ws-card:hover .ws-thumb img { transform: scale(1.03); }
+            .ws-body { padding: 0.75rem 0.85rem 0.85rem; display: flex; flex-direction: column; flex: 1; }
+            .ws-meta { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; }
+            .ws-week { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 600; color: var(--primary-color); background: #eef2ff; border-radius: 3px; padding: 0.1rem 0.4rem; }
+            .ws-kind { font-size: 0.72rem; color: var(--text-light); }
+            .ws-title { font-size: 0.98rem; font-weight: 600; line-height: 1.35; margin: 0 0 0.35rem; }
+            .ws-title a { color: var(--text-color); text-decoration: none; }
+            .ws-title a:hover { color: var(--primary-color); }
+            .ws-desc { font-size: 0.84rem; line-height: 1.5; color: #6b7280; margin: 0 0 0.6rem; flex: 1; }
+            .ws-links { display: flex; gap: 0.9rem; font-size: 0.82rem; }
+            .ws-links a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+            .ws-links a:hover { text-decoration: underline; }
+            @media (max-width: 480px) { .ws-grid { grid-template-columns: minmax(0, 1fr); } }
         </style>
         <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -509,17 +532,155 @@
             <div class="archive">
                 <h1 class="page__title animate-fade-in-up">Teaching</h1>
                 <h2 id="current-teaching" class="fade-in">Current Teaching</h2>
-                <article class="archive__item fade-in" itemscope="" itemtype="http://schema.org/CreativeWork">
-                    <h3 class="archive__item-title" itemprop="headline">COMP90086 Computer Vision</h3>
-                    <p>The University of Melbourne, 2026</p>
-                    <p class="archive__item-excerpt excerpt" itemprop="description">
-                        Workshop slides. Same interactive reveal.js decks used in class:
-                    </p>
-                    <ul>
-                        <li><a href="https://hesamasad.github.io/week-2-arrays-plots-pixels-workshop/">Week 2 — Arrays, plots and pixels</a> (NumPy, Matplotlib, OpenCV)</li>
-                        <li><a href="https://hesamasad.github.io/week-3-filtering-workshop/">Week 3 — Filtering in space and frequency</a></li>
-                        <li><a href="https://hesamasad.github.io/week-4-colour-and-cnns-workshop/">Week 4 — Colour, light and learned filters</a></li>
-                    </ul>
+                <p class="course-jump fade-in">Jump to <a href="#comp90086">COMP90086 Computer Vision</a> · <a href="#comp90073">COMP90073 Trustworthy Machine Learning</a></p>
+                <article class="archive__item course fade-in" id="comp90086" itemscope="" itemtype="http://schema.org/Course">
+                    <h3 class="archive__item-title" itemprop="name">COMP90086 Computer Vision</h3>
+                    <p>The University of Melbourne, 2026 · Workshop tutor</p>
+                    <p class="archive__item-excerpt excerpt" itemprop="description">8 interactive workshop pages: reveal.js decks and browser workbooks, with models that run live in the page.</p>
+                    <div class="ws-grid">
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-2-arrays-plots-pixels-workshop/" aria-label="Open Week 2: Arrays, plots and pixels"><img src="images/teaching/week-2-arrays-plots-pixels-workshop.webp" alt="Preview of the Week 2 page: Arrays, plots and pixels" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 2</span><span class="ws-kind">Slides</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-2-arrays-plots-pixels-workshop/">Arrays, plots and pixels</a></h4>
+                                <p class="ws-desc">NumPy, Matplotlib and OpenCV: how an image is just an array, and how to look at it.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-2-arrays-plots-pixels-workshop/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-2-arrays-plots-pixels-workshop"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-3-filtering-workshop/" aria-label="Open Week 3: Filtering in space and frequency"><img src="images/teaching/week-3-filtering-workshop.webp" alt="Preview of the Week 3 page: Filtering in space and frequency" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 3</span><span class="ws-kind">Slides</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-3-filtering-workshop/">Filtering in space and frequency</a></h4>
+                                <p class="ws-desc">Convolution with small windows, and the same filters seen as frequency masks.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-3-filtering-workshop/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-3-filtering-workshop"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-4-colour-and-cnns-workshop/" aria-label="Open Week 4: Colour, light and learned filters"><img src="images/teaching/week-4-colour-and-cnns-workshop.webp" alt="Preview of the Week 4 page: Colour, light and learned filters" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 4</span><span class="ws-kind">Slides</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-4-colour-and-cnns-workshop/">Colour, light and learned filters</a></h4>
+                                <p class="ws-desc">Colour spaces and image formation, with a CNN running live in the browser.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-4-colour-and-cnns-workshop/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-4-colour-and-cnns-workshop"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-5-cnns-workshop/" aria-label="Open Week 5: Counting a CNN"><img src="images/teaching/week-5-cnns-workshop.webp" alt="Preview of the Week 5 page: Counting a CNN" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 5</span><span class="ws-kind">Slides + lab</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-5-cnns-workshop/">Counting a CNN</a></h4>
+                                <p class="ws-desc">Parameter and output-size counting for convolution, pooling and dense layers.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-5-cnns-workshop/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-5-cnns-workshop"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-6-vit-gradcam/" aria-label="Open Week 6: Vision Transformers and Grad-CAM"><img src="images/teaching/week-6-vit-gradcam.webp" alt="Preview of the Week 6 page: Vision Transformers and Grad-CAM" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 6</span><span class="ws-kind">Workbook</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-6-vit-gradcam/">Vision Transformers and Grad-CAM</a></h4>
+                                <p class="ws-desc">Patches to tokens, self-attention, attention distance, and Grad-CAM explanations.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-6-vit-gradcam/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-6-vit-gradcam"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-7-features-hough-ransac/" aria-label="Open Week 7: Features, Hough and RANSAC"><img src="images/teaching/week-7-features-hough-ransac.webp" alt="Preview of the Week 7 page: Features, Hough and RANSAC" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 7</span><span class="ws-kind">Workbook</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-7-features-hough-ransac/">Features, Hough and RANSAC</a></h4>
+                                <p class="ws-desc">Edges step by step, Hough voting for lines, and robust fitting with RANSAC.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-7-features-hough-ransac/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-7-features-hough-ransac"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-10-diffusion-models/" aria-label="Open Week 10: Diffusion models"><img src="images/teaching/week-10-diffusion-models.webp" alt="Preview of the Week 10 page: Diffusion models" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 10</span><span class="ws-kind">Workbook</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-10-diffusion-models/">Diffusion models</a></h4>
+                                <p class="ws-desc">From noise to digits: a diffusion primer with the worksheet U-Net running in the browser.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-10-diffusion-models/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-10-diffusion-models"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-11-segmentation/" aria-label="Open Week 11: Image segmentation"><img src="images/teaching/week-11-segmentation.webp" alt="Preview of the Week 11 page: Image segmentation" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 11</span><span class="ws-kind">Workbook</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-11-segmentation/">Image segmentation</a></h4>
+                                <p class="ws-desc">From pixel clustering to encoder–decoders, with a live walkthrough of the notebook.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-11-segmentation/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-11-segmentation"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="archive__item course fade-in" id="comp90073" itemscope="" itemtype="http://schema.org/Course">
+                    <h3 class="archive__item-title" itemprop="name">COMP90073 Trustworthy Machine Learning</h3>
+                    <p>The University of Melbourne, 2026 · Workshop tutor</p>
+                    <p class="archive__item-excerpt excerpt" itemprop="description">7 interactive workshop pages covering privacy, anomaly and OOD detection, adversarial robustness and backdoors.</p>
+                    <div class="ws-grid">
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-3-privacy-workshop/" aria-label="Open Week 3: Privacy leaks through the interface"><img src="images/teaching/week-3-privacy-workshop.webp" alt="Preview of the Week 3 page: Privacy leaks through the interface" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 3</span><span class="ws-kind">Slides</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-3-privacy-workshop/">Privacy leaks through the interface</a></h4>
+                                <p class="ws-desc">How query answers, trained models and anonymised tables each leak private data.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-3-privacy-workshop/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-3-privacy-workshop"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-4-dp-workshop/" aria-label="Open Week 4: k-anonymity and differential privacy"><img src="images/teaching/week-4-dp-workshop.webp" alt="Preview of the Week 4 page: k-anonymity and differential privacy" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 4</span><span class="ws-kind">Slides</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-4-dp-workshop/">k-anonymity and differential privacy</a></h4>
+                                <p class="ws-desc">k-anonymity via Incognito, and bounding what any single record can reveal.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-4-dp-workshop/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-4-dp-workshop"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-5-anomaly-clustering/" aria-label="Open Week 5: Anomaly detection and clustering"><img src="images/teaching/week-5-anomaly-clustering.webp" alt="Preview of the Week 5 page: Anomaly detection and clustering" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 5</span><span class="ws-kind">Workbook</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-5-anomaly-clustering/">Anomaly detection and clustering</a></h4>
+                                <p class="ws-desc">Choosing metrics, k-means as an outlier detector, and evolving fraud.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-5-anomaly-clustering/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-5-anomaly-clustering"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-6-autoencoders-one-class-svm/" aria-label="Open Week 6: Autoencoders and one-class SVM"><img src="images/teaching/week-6-autoencoders-one-class-svm.webp" alt="Preview of the Week 6 page: Autoencoders and one-class SVM" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 6</span><span class="ws-kind">Workbook</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-6-autoencoders-one-class-svm/">Autoencoders and one-class SVM</a></h4>
+                                <p class="ws-desc">Autoencoders versus PCA, back-propagation by hand, and one-class SVM boundaries.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-6-autoencoders-one-class-svm/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-6-autoencoders-one-class-svm"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-8-ood-contrast-adversarial/" aria-label="Open Week 8: OOD detection, contrast mining and adversarial attacks"><img src="images/teaching/week-8-ood-contrast-adversarial.webp" alt="Preview of the Week 8 page: OOD detection, contrast mining and adversarial attacks" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 8</span><span class="ws-kind">Workbook</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-8-ood-contrast-adversarial/">OOD detection, contrast mining and adversarial attacks</a></h4>
+                                <p class="ws-desc">When test data leaves the training distribution, and how to perturb a model on purpose.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-8-ood-contrast-adversarial/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-8-ood-contrast-adversarial"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-10-attacks-autodiff-robustness/" aria-label="Open Week 10: Attacks, autodiff and robust generalisation"><img src="images/teaching/week-10-attacks-autodiff-robustness.webp" alt="Preview of the Week 10 page: Attacks, autodiff and robust generalisation" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 10</span><span class="ws-kind">Workbook</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-10-attacks-autodiff-robustness/">Attacks, autodiff and robust generalisation</a></h4>
+                                <p class="ws-desc">Iterative FGSM, forward- versus reverse-mode autodiff, and the adversarial generalisation gap.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-10-attacks-autodiff-robustness/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-10-attacks-autodiff-robustness"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                        <div class="ws-card">
+                            <a class="ws-thumb" href="https://hesamasad.github.io/week-11-backdoors-certified-defences/" aria-label="Open Week 11: Backdoors and certified defences"><img src="images/teaching/week-11-backdoors-certified-defences.webp" alt="Preview of the Week 11 page: Backdoors and certified defences" width="640" height="400" loading="lazy"></a>
+                            <div class="ws-body">
+                                <div class="ws-meta"><span class="ws-week">Week 11</span><span class="ws-kind">Workbook</span></div>
+                                <h4 class="ws-title"><a href="https://hesamasad.github.io/week-11-backdoors-certified-defences/">Backdoors and certified defences</a></h4>
+                                <p class="ws-desc">Threat models, randomised smoothing, adversarial CAPTCHAs and a live backdoored MNIST model.</p>
+                                <div class="ws-links"><a href="https://hesamasad.github.io/week-11-backdoors-certified-defences/"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Open</a><a href="https://github.com/HesamAsad/week-11-backdoors-certified-defences"><i class="fab fa-github" aria-hidden="true"></i> Source</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
                 <br/>
                 <!-- <h2 id="current-teachings-summer-semester-2023--unili" class="fade-in">Current Teaching</h2>
