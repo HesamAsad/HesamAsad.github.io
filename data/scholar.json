@@ -1,7 +1,7 @@
 {
- "updated": "2026-10-15",
+ "updated": "2026-11-16",
  "profile": "https://scholar.google.com/citations?user=cL60wssAAAAJ",
- "citations": 44,
+ "citations": 57,
  "h_index": 4,
  "i10_index": 1,
  "papers": {
@@ -22,32 +22,32 @@
   },
   "cL60wssAAAAJ:8k81kl-MbHgC": {
    "title": "Self-supervised learning for a gene program-centric view of cell states",
-   "cites": 1,
+   "cites": 2,
    "year": 2026
   },
   "cL60wssAAAAJ:5nxA0vEk-isC": {
    "title": "Celcomen: spatial causal disentanglement for single-cell and tissue perturbation modeling",
-   "cites": 18,
+   "cites": 21,
    "year": 2026
   },
   "cL60wssAAAAJ:hqOjcs7Dif8C": {
    "title": "Predicting how perturbations reshape cellular trajectories with PerturbGen",
-   "cites": 3,
+   "cites": 6,
    "year": 2026
   },
   "cL60wssAAAAJ:roLk4NBRz8UC": {
    "title": "DirMoE: Dirichlet-routed Mixture of Experts",
-   "cites": 3,
+   "cites": 4,
    "year": 2026
   },
   "cL60wssAAAAJ:kNdYIx-mwKoC": {
    "title": "Shortest-Path Flow Matching with Mixture-Conditioned Bases for OOD Generalization to Unseen Conditions",
-   "cites": 0,
+   "cites": 1,
    "year": 2026
   },
   "cL60wssAAAAJ:UebtZRa9Y70C": {
    "title": "Softmax is not Enough (for Adaptive Conformal Classification)",
-   "cites": 0,
+   "cites": 1,
    "year": 2026
   },
   "cL60wssAAAAJ:Se3iqnhoufwC": {
@@ -67,7 +67,7 @@
   },
   "cL60wssAAAAJ:eQOLeE2rZwMC": {
    "title": "GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs",
-   "cites": 5,
+   "cites": 6,
    "year": 2025
   },
   "cL60wssAAAAJ:WF5omc3nYNoC": {
@@ -77,7 +77,7 @@
   },
   "cL60wssAAAAJ:YsMSGLbcyi4C": {
    "title": "Integrating multi-covariate disentanglement with counterfactual analysis on synthetic data enables cell type discovery and counterfactual predictions.",
-   "cites": 4,
+   "cites": 5,
    "year": 2025
   },
   "cL60wssAAAAJ:IjCSPb-OGe4C": {
@@ -92,7 +92,7 @@
   },
   "cL60wssAAAAJ:2osOgNQ5qMEC": {
    "title": "Trained Models Tell Us How to Make Them Robust to Spurious Correlation without Group Annotation",
-   "cites": 2,
+   "cites": 3,
    "year": 2024
   },
   "cL60wssAAAAJ:UeHWp8X0CEIC": {
