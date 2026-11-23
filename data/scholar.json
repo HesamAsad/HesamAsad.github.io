@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-23",
  "profile": "https://scholar.google.com/citations?user=cL60wssAAAAJ",
- "citations": 57,
+ "citations": 60,
  "h_index": 4,
  "i10_index": 1,
  "papers": {
@@ -27,7 +27,7 @@
   },
   "cL60wssAAAAJ:5nxA0vEk-isC": {
    "title": "Celcomen: spatial causal disentanglement for single-cell and tissue perturbation modeling",
-   "cites": 21,
+   "cites": 23,
    "year": 2026
   },
   "cL60wssAAAAJ:hqOjcs7Dif8C": {
@@ -57,7 +57,7 @@
   },
   "cL60wssAAAAJ:LkGwnXOMwfcC": {
    "title": "Mixflow: Mixture-conditioned flow matching for out-of-distribution generalization",
-   "cites": 2,
+   "cites": 3,
    "year": 2026
   },
   "cL60wssAAAAJ:ufrVoPGSRksC": {
